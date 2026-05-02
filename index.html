@@ -20,7 +20,7 @@
 html,body{height:100%;overflow:hidden;background:#0F1F3D;font-family:"Epilogue",sans-serif;color:#0F1F3D;}
 #app{position:relative;width:100%;height:100%;overflow:hidden;}
 
-/* SCREENS 3 */
+/* SCREENS */
 .screen{
   position:absolute;inset:0;display:none;flex-direction:column;
   background:#F8F6F1;overflow:hidden;
@@ -117,28 +117,40 @@ input[type=range].sslider::-webkit-slider-thumb{-webkit-appearance:none;width:22
 
 /* ROLE MATCH */
 .rm{border-radius:16px;padding:16px;margin-bottom:12px;}
-.rm-1{background:#fff;border:2px solid #C9A84C;}
-.rm-2{background:#fff;border:1.5px solid #2952B3;}
-.rm-3{background:#fff;border:1.5px solid #E0DBD0;}
+.rm-1{background:#0F1F3D;border:2px solid #0F1F3D;}
+.rm-2{background:#2952B3;border:1.5px solid #2952B3;}
+.rm-3{background:#EEF3FB;border:1.5px solid #4A8FE7;}
 .rm-rank{font-size:10px;font-weight:700;border-radius:8px;padding:3px 9px;display:inline-block;margin-bottom:10px;}
-.rm-1 .rm-rank{background:rgba(201,168,76,0.12);color:#8A6A1A;}
-.rm-2 .rm-rank{background:rgba(41,82,179,0.08);color:#2952B3;}
-.rm-3 .rm-rank{background:#F5F0E8;color:#8A8FA0;}
+.rm-1 .rm-rank{background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);}
+.rm-2 .rm-rank{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);}
+.rm-3 .rm-rank{background:rgba(74,143,231,0.12);color:#2952B3;}
 .rm-top{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
 .rm-ico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.rm-title{font-family:"Fraunces",serif;font-size:16px;font-weight:700;color:#0F1F3D;flex:1;}
+.rm-1 .rm-ico{background:rgba(255,255,255,0.1);}
+.rm-2 .rm-ico{background:rgba(255,255,255,0.15);}
+.rm-3 .rm-ico{background:rgba(74,143,231,0.1);}
+.rm-title{font-family:"Fraunces",serif;font-size:16px;font-weight:700;flex:1;}
+.rm-1 .rm-title{color:#fff;}
+.rm-2 .rm-title{color:#fff;}
+.rm-3 .rm-title{color:#0F1F3D;}
 .rm-pct{font-family:"Fraunces",serif;font-size:28px;font-weight:700;}
-.rm-1 .rm-pct{color:#C9A84C;} .rm-2 .rm-pct{color:#2952B3;} .rm-3 .rm-pct{color:#8A8FA0;}
-.rm-bar{height:6px;background:#F0EAE0;border-radius:3px;margin-bottom:10px;overflow:hidden;}
+.rm-1 .rm-pct{color:#C9A84C;}
+.rm-2 .rm-pct{color:rgba(255,255,255,0.9);}
+.rm-3 .rm-pct{color:#2952B3;}
+.rm-bar{height:6px;background:rgba(255,255,255,0.15);border-radius:3px;margin-bottom:10px;overflow:hidden;}
+.rm-3 .rm-bar{background:rgba(41,82,179,0.12);}
 .rm-bar-fill{height:100%;border-radius:3px;}
-.rm-1 .rm-bar-fill{background:linear-gradient(90deg,#C9A84C,#E8C96A);}
-.rm-2 .rm-bar-fill{background:linear-gradient(90deg,#2952B3,#4A8FE7);}
-.rm-3 .rm-bar-fill{background:#8A8FA0;}
-.rm-desc{font-size:12px;color:#8A8FA0;line-height:1.55;margin-bottom:10px;}
+.rm-1 .rm-bar-fill{background:#C9A84C;}
+.rm-2 .rm-bar-fill{background:rgba(255,255,255,0.6);}
+.rm-3 .rm-bar-fill{background:#4A8FE7;}
+.rm-desc{font-size:12px;line-height:1.55;margin-bottom:10px;}
+.rm-1 .rm-desc{color:rgba(255,255,255,0.6);}
+.rm-2 .rm-desc{color:rgba(255,255,255,0.7);}
+.rm-3 .rm-desc{color:#8A8FA0;}
 .rm-cta{width:100%;border:none;border-radius:10px;padding:11px;font-family:"Epilogue",sans-serif;font-size:13px;font-weight:600;cursor:pointer;}
 .rm-1 .rm-cta{background:#C9A84C;color:#0F1F3D;}
-.rm-2 .rm-cta{background:#0F1F3D;color:#fff;}
-.rm-3 .rm-cta{background:#F5F0E8;color:#0F1F3D;}
+.rm-2 .rm-cta{background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.2);}
+.rm-3 .rm-cta{background:#2952B3;color:#fff;}
 
 /* SWIPE SCREEN */
 .swipe-bg{background:#0F1F3D;display:flex;flex-direction:column;}
@@ -255,6 +267,69 @@ input[type=range].sslider::-webkit-slider-thumb{-webkit-appearance:none;width:22
 .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:#0F1F3D;color:#fff;border-radius:20px;padding:10px 20px;font-size:13px;font-weight:500;opacity:0;transition:all 0.3s;z-index:9999;white-space:nowrap;pointer-events:none;}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 
+/* ROLE PREFERENCE CARDS */
+.role-pref-card{background:#fff;border:1.5px solid #E0DBD0;border-radius:16px;margin-bottom:12px;overflow:hidden;}
+.rpc-header{background:#0F1F3D;padding:12px 14px;display:flex;align-items:center;gap:10px;}
+.rpc-title{font-family:"Fraunces",serif;font-size:15px;font-weight:700;color:#fff;flex:1;}
+.rpc-remove{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,0.1);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.rpc-remove svg{width:12px;height:12px;fill:none;stroke:rgba(255,255,255,0.6);stroke-width:2;}
+.rpc-body{padding:14px;}
+.pref-label{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8A8FA0;margin-bottom:7px;margin-top:12px;}
+.pref-label:first-child{margin-top:0;}
+.pref-chips-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px;}
+.pchip{font-size:12px;font-weight:500;padding:7px 13px;border-radius:20px;border:1.5px solid #E0DBD0;background:#fff;color:#8A8FA0;cursor:pointer;transition:all 0.2s;}
+.pchip.on{border-color:#0F1F3D;background:#0F1F3D;color:#fff;font-weight:600;}
+.sal-row{display:flex;align-items:center;gap:8px;background:#F8F6F1;border-radius:10px;padding:10px 12px;}
+.sal-prefix{font-size:14px;font-weight:600;color:#0F1F3D;}
+.sal-input{border:none;outline:none;font-size:14px;font-weight:600;color:#0F1F3D;font-family:"Epilogue",sans-serif;background:transparent;width:80px;}
+.sal-suffix{font-size:11px;color:#8A8FA0;}
+
+/* SKILL BANK CARDS */
+.sk-card{background:#fff;border:1.5px solid #E0DBD0;border-radius:14px;padding:13px;margin-bottom:9px;transition:border-color 0.2s;}
+.sk-card.checked{border-color:#2952B3;background:rgba(41,82,179,0.025);}
+.sk-top{display:flex;align-items:center;gap:10px;}
+.sk-ico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sk-ico svg{width:17px;height:17px;fill:none;stroke-width:1.5;}
+.sk-info{flex:1;}
+.sk-name{font-size:13px;font-weight:600;color:#0F1F3D;}
+.sk-meta{display:flex;align-items:center;gap:6px;margin-top:3px;}
+.sk-freq-bar{width:50px;height:3px;background:#F0EAE0;border-radius:2px;overflow:hidden;}
+.sk-freq-fill{height:100%;border-radius:2px;background:#2952B3;}
+.sk-pct{font-size:10px;font-weight:700;color:#2952B3;}
+.sk-badge{font-size:9px;font-weight:700;border-radius:4px;padding:2px 6px;}
+.sk-badge.hot{background:rgba(232,71,42,0.1);color:#E8472A;}
+.sk-badge.rising{background:rgba(201,168,76,0.1);color:#8A6A1A;}
+.sk-badge.new{background:rgba(74,143,231,0.1);color:#2952B3;}
+.sk-check{width:22px;height:22px;border-radius:50%;border:1.5px solid #E0DBD0;display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;transition:all 0.2s;}
+.sk-card.checked .sk-check{background:#2952B3;border-color:#2952B3;}
+.sk-check svg{width:11px;height:11px;fill:none;stroke:#fff;stroke-width:2.5;}
+.sk-slider-wrap{padding-top:11px;margin-top:11px;border-top:1px solid #F0EAE0;}
+.sk-strength-display{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;}
+.sk-strength-label{font-size:11px;font-weight:600;color:#2952B3;}
+.sk-strength-pct{font-family:"Fraunces",serif;font-size:18px;font-weight:700;color:#2952B3;}
+input[type=range].sk-slider{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:3px;background:linear-gradient(to right,#2952B3 70%,#E0DBD0 70%);outline:none;cursor:pointer;}
+input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#2952B3;border:3px solid #fff;box-shadow:0 2px 6px rgba(41,82,179,0.35);}
+.strength-levels{display:flex;justify-content:space-between;margin-top:4px;}
+.strength-level{font-size:9px;color:#E0DBD0;font-weight:500;}
+.strength-level.active{color:#2952B3;font-weight:700;}
+
+/* SKILL CATEGORY TABS */
+.scat{white-space:nowrap;font-size:11px;font-weight:600;padding:7px 14px;border-radius:20px;border:1.5px solid #E0DBD0;background:#fff;color:#8A8FA0;cursor:pointer;flex-shrink:0;transition:all 0.2s;}
+.scat.on{background:#0F1F3D;color:#fff;border-color:#0F1F3D;}
+
+/* ROLE PILLS */
+.role-pill{font-size:12px;font-weight:600;padding:7px 13px;border-radius:20px;cursor:pointer;display:flex;align-items:center;gap:4px;transition:all 0.2s;}
+.role-pill.desired{background:#0F1F3D;color:#fff;border:1.5px solid #0F1F3D;}
+.role-pill.desired:active{opacity:0.8;}
+.role-pill.ai-suggest{background:rgba(201,168,76,0.1);color:#8A6A1A;border:1.5px solid rgba(201,168,76,0.4);}
+.role-pill.ai-suggest:active{background:rgba(201,168,76,0.2);}
+.suggest-item{padding:12px 16px;font-size:14px;color:#0F1F3D;cursor:pointer;display:flex;align-items:center;gap:10px;border-bottom:1px solid #F0EAE0;}
+.suggest-item:last-child{border-bottom:none;}
+.suggest-item:active{background:#F8F6F1;}
+.suggest-item .suggest-icon{font-size:18px;}
+.suggest-item .suggest-name{font-weight:600;flex:1;}
+.suggest-item .suggest-count{font-size:11px;color:#8A8FA0;}
+
 /* SEC HEADER */
 .sec{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A8FA0;margin-bottom:10px;}
 .stat-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px;}
@@ -313,10 +388,19 @@ input[type=range].sslider::-webkit-slider-thumb{-webkit-appearance:none;width:22
     <div class="ttl">Let's start with the basics</div>
     <div class="sub">How clients will find and recognize you on Facet.</div>
     <div class="av-section">
-      <div class="av-ring" onclick="loadPhoto()">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <input type="file" id="photo-input" accept="image/*" capture="user" style="display:none;" onchange="handlePhotoUpload(event)"/>
+      <div class="av-ring" id="av-ring" onclick="document.getElementById('photo-input').click()">
+        <img id="av-preview" src="" alt="" style="display:none;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;"/>
+        <svg id="av-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
       </div>
-      <div class="av-hint">Tap to add photo + video verify</div>
+      <div class="av-hint" id="av-hint">Tap to add photo</div>
+      <div id="av-verify-btn" style="display:none;margin-top:10px;">
+        <button onclick="startVideoVerify()" style="background:#1D9BF0;color:#fff;border:none;border-radius:12px;padding:10px 20px;font-family:'Epilogue',sans-serif;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:7px;margin:0 auto;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          Record verification video
+        </button>
+        <div style="font-size:11px;color:#8A8FA0;text-align:center;margin-top:6px;">5-second selfie to verify your identity</div>
+      </div>
     </div>
     <div class="field"><label>Full name</label><input type="text" value="Afsaneh Motameni" placeholder="Your full name"/></div>
     <div class="field"><label>Headline</label><input type="text" value="Solution Architect · Product Manager" placeholder="Your professional headline"/></div>
@@ -332,75 +416,122 @@ input[type=range].sslider::-webkit-slider-thumb{-webkit-appearance:none;width:22
   </div>
 </div>
 
-<!-- ═══ STEP 2: ROLES ═══ -->
+<!-- ═══ STEP 2: ROLES + PREFERENCES ═══ -->
 <div class="screen" id="s-step2">
   <div class="nav">
     <button class="nav-back" onclick="goBack()"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
-    <div class="nav-title">Your skill facets</div>
-    <div class="nav-step">2 of 4</div>
+    <div class="nav-title">Your roles</div>
+    <div class="nav-step">2 of 5</div>
   </div>
-  <div class="prog"><div class="prog-fill" style="width:50%"></div></div>
+  <div class="prog"><div class="prog-fill" style="width:40%"></div></div>
   <div class="scroll">
     <div class="lbl">What you do</div>
-    <div class="ttl">Pick your roles</div>
-    <div class="sub">Facet AI will pull live market skills for each role you select.</div>
-    <div class="chips">
-      <div class="chip sel" onclick="toggleChip(this)">Solution Architect</div>
-      <div class="chip sel" onclick="toggleChip(this)">Product Manager</div>
-      <div class="chip sel" onclick="toggleChip(this)">Project Planner</div>
-      <div class="chip" onclick="toggleChip(this)">UX Designer</div>
-      <div class="chip" onclick="toggleChip(this)">Data Analyst</div>
-      <div class="chip" onclick="toggleChip(this)">DevOps Engineer</div>
-      <div class="chip" onclick="toggleChip(this)">Scrum Master</div>
-      <div class="chip" onclick="toggleChip(this)">Brand Strategist</div>
+    <div class="ttl">Add your roles</div>
+    <div class="sub">Type a role to search. Then set your preferences for each one — location, schedule, and salary.</div>
+
+    <!-- Role search -->
+    <div style="position:relative;margin-bottom:14px;">
+      <div style="display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid #E0DBD0;border-radius:13px;padding:12px 15px;" id="role-input-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8FA0" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="role-search" placeholder="Search a role e.g. Product Manager..."
+          style="border:none;outline:none;font-size:14px;color:#0F1F3D;font-family:'Epilogue',sans-serif;width:100%;background:transparent;"
+          oninput="filterRoles(this.value)" onkeydown="handleRoleKey(event)"/>
+      </div>
+      <div id="role-suggestions" style="display:none;position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border:1.5px solid #E0DBD0;border-radius:13px;overflow:hidden;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,0.12);"></div>
     </div>
-    <div class="ai-banner">
-      <div class="ai-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg></div>
-      <div class="ai-txt"><strong>Facet AI found 14 live skills</strong> from today's job market for your 3 roles. Rate your strength in each.</div>
+
+    <!-- Selected roles with preferences -->
+    <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#0F1F3D;margin-bottom:10px;">Your selected roles</div>
+    <div id="role-prefs-list">
+      <!-- Role cards injected by JS -->
     </div>
-    <div class="sec">Set your strength</div>
-    <div class="skill-card active">
-      <div class="skill-top">
-        <div class="skill-ico" style="background:rgba(201,168,76,0.1);"><svg viewBox="0 0 24 24" stroke="#8A6A1A"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/></svg></div>
-        <div><div class="skill-name">Solution Architect</div><div class="skill-sub">Technical · Cloud · Systems · 95% match rate</div></div>
-        <div class="skill-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-      <div class="slider-wrap">
-        <div class="slider-val">Expert — 95%</div>
-        <input type="range" class="sslider" value="95" oninput="updateSlider(this)" style="background:linear-gradient(to right,#2952B3 95%,#E0DBD0 95%)"/>
-        <div class="slider-ends"><span>Beginner</span><span>Expert</span></div>
+
+    <!-- AI suggested roles -->
+    <div id="ai-suggested-section" style="display:none;margin-top:8px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#C9A84C;margin-bottom:8px;">🤖 AI also suggests — based on your profile</div>
+      <div id="ai-suggested-roles" style="display:flex;flex-wrap:wrap;gap:7px;"></div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="dots"><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+    <button class="btn btn-navy" onclick="goTo('s-skills')">Build skills bank <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+  </div>
+</div>
+
+
+<!-- ═══ STEP 3: SKILLS BANK ═══ -->
+<div class="screen" id="s-skills">
+  <div class="nav">
+    <button class="nav-back" onclick="goBack()"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <div class="nav-title">Skills bank</div>
+    <div class="nav-step">3 of 5</div>
+  </div>
+  <div class="prog"><div class="prog-fill" style="width:60%"></div></div>
+  <div class="scroll">
+    <div class="lbl">Live from today's market</div>
+    <div class="ttl">Your skill strengths</div>
+    <div class="sub">These skills are pulled from today's live job postings for your roles. Check each skill you have and drag the slider to set your strength.</div>
+
+    <!-- Live market pulse -->
+    <div style="background:linear-gradient(135deg,#0F1F3D,#1B3A7A);border-radius:14px;padding:13px 15px;margin-bottom:16px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(201,168,76,0.8);margin-bottom:10px;">📡 Market demand · live today</div>
+      <div id="pulse-rows">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;">
+          <div style="font-size:11px;font-weight:600;color:#fff;flex:1;">Cloud architecture</div>
+          <div style="flex:1;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;"><div style="width:89%;height:100%;background:#C9A84C;border-radius:2px;"></div></div>
+          <div style="font-size:10px;font-weight:700;color:#C9A84C;min-width:32px;text-align:right;">89%</div>
+          <div style="font-size:12px;">🔥</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;">
+          <div style="font-size:11px;font-weight:600;color:#fff;flex:1;">Stakeholder mgmt</div>
+          <div style="flex:1;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;"><div style="width:88%;height:100%;background:#C9A84C;border-radius:2px;"></div></div>
+          <div style="font-size:10px;font-weight:700;color:#C9A84C;min-width:32px;text-align:right;">88%</div>
+          <div style="font-size:12px;">🔥</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;">
+          <div style="font-size:11px;font-weight:600;color:#fff;flex:1;">System design</div>
+          <div style="flex:1;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;"><div style="width:78%;height:100%;background:#4A8FE7;border-radius:2px;"></div></div>
+          <div style="font-size:10px;font-weight:700;color:#4A8FE7;min-width:32px;text-align:right;">78%</div>
+          <div style="font-size:12px;">📈</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="font-size:11px;font-weight:600;color:#fff;flex:1;">AI / LLM literacy</div>
+          <div style="flex:1;height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;"><div style="width:68%;height:100%;background:#4A8FE7;border-radius:2px;"></div></div>
+          <div style="font-size:10px;font-weight:700;color:#4A8FE7;min-width:32px;text-align:right;">68%</div>
+          <div style="font-size:12px;">🆕</div>
+        </div>
       </div>
     </div>
-    <div class="skill-card active">
-      <div class="skill-top">
-        <div class="skill-ico" style="background:rgba(41,82,179,0.08);"><svg viewBox="0 0 24 24" stroke="#2952B3"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
-        <div><div class="skill-name">Product Manager</div><div class="skill-sub">Strategy · Leadership · 65% match rate</div></div>
-        <div class="skill-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-      </div>
-      <div class="slider-wrap">
-        <div class="slider-val">Advanced — 65%</div>
-        <input type="range" class="sslider" value="65" oninput="updateSlider(this)" style="background:linear-gradient(to right,#2952B3 65%,#E0DBD0 65%)"/>
-        <div class="slider-ends"><span>Beginner</span><span>Expert</span></div>
-      </div>
+
+    <!-- Skill category tabs -->
+    <div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:14px;-webkit-overflow-scrolling:touch;" id="skill-cats">
+      <div class="scat on" onclick="setSkillCat(this,'all')">All</div>
+      <div class="scat" onclick="setSkillCat(this,'technical')">🔧 Technical</div>
+      <div class="scat" onclick="setSkillCat(this,'leadership')">👥 Leadership</div>
+      <div class="scat" onclick="setSkillCat(this,'strategy')">📋 Strategy</div>
+      <div class="scat" onclick="setSkillCat(this,'data')">📊 Data</div>
     </div>
-    <div class="skill-card active">
-      <div class="skill-top">
-        <div class="skill-ico" style="background:rgba(74,143,231,0.1);"><svg viewBox="0 0 24 24" stroke="#4A8FE7"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-        <div><div class="skill-name">Project Planner</div><div class="skill-sub">Operations · Delivery · 60% match rate</div></div>
-        <div class="skill-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+
+    <!-- Skills list (injected by JS) -->
+    <div id="skills-list"></div>
+
+    <!-- Add custom skill -->
+    <div style="background:#fff;border:1.5px dashed #E0DBD0;border-radius:14px;padding:13px;display:flex;align-items:center;gap:10px;cursor:pointer;margin-top:4px;" onclick="addCustomSkill()">
+      <div style="width:36px;height:36px;border-radius:50%;background:rgba(41,82,179,0.08);border:1.5px dashed #2952B3;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2952B3" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
       </div>
-      <div class="slider-wrap">
-        <div class="slider-val">Advanced — 60%</div>
-        <input type="range" class="sslider" value="60" oninput="updateSlider(this)" style="background:linear-gradient(to right,#2952B3 60%,#E0DBD0 60%)"/>
-        <div class="slider-ends"><span>Beginner</span><span>Expert</span></div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:#2952B3;">Add a custom skill</div>
+        <div style="font-size:11px;color:#8A8FA0;margin-top:1px;">Something not on the list? Add it manually</div>
       </div>
     </div>
   </div>
   <div class="bottom">
-    <div class="dots"><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>
-    <button class="btn btn-navy" onclick="goTo('s-airmatch')">Continue <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+    <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>
+    <button class="btn btn-navy" onclick="goTo('s-airmatch')">See my role matches <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
   </div>
 </div>
+
 
 <!-- ═══ AI MATCH RESULTS ═══ -->
 <div class="screen" id="s-airmatch">
@@ -422,7 +553,7 @@ input[type=range].sslider::-webkit-slider-thumb{-webkit-appearance:none;width:22
     <div class="rm rm-1">
       <div class="rm-rank">🥇 Best match</div>
       <div class="rm-top">
-        <div class="rm-ico" style="background:rgba(201,168,76,0.1);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8A6A1A" stroke-width="1.5"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/></svg></div>
+        <div class="rm-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/></svg></div>
         <div class="rm-title">Solution Architect</div>
         <div class="rm-pct">95%</div>
       </div>
@@ -433,7 +564,7 @@ input[type=range].sslider::-webkit-slider-thumb{-webkit-appearance:none;width:22
     <div class="rm rm-2">
       <div class="rm-rank">🥈 Strong match</div>
       <div class="rm-top">
-        <div class="rm-ico" style="background:rgba(41,82,179,0.08);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2952B3" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <div class="rm-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
         <div class="rm-title">Product Manager</div>
         <div class="rm-pct">65%</div>
       </div>
@@ -444,7 +575,7 @@ input[type=range].sslider::-webkit-slider-thumb{-webkit-appearance:none;width:22
     <div class="rm rm-3">
       <div class="rm-rank">🥉 Partial match</div>
       <div class="rm-top">
-        <div class="rm-ico" style="background:#F5F0E8;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8A8FA0" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div class="rm-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A8FE7" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
         <div class="rm-title">Project Planner</div>
         <div class="rm-pct">60%</div>
       </div>
@@ -479,7 +610,7 @@ input[type=range].sslider::-webkit-slider-thumb{-webkit-appearance:none;width:22
     <div class="sec">Top match today</div>
     <div class="rm rm-1" style="margin-bottom:16px;cursor:pointer;" onclick="goTo('s-swipe')">
       <div class="rm-top" style="margin-bottom:8px;">
-        <div class="rm-ico" style="background:rgba(201,168,76,0.1);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8A6A1A" stroke-width="1.5"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/></svg></div>
+        <div class="rm-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/></svg></div>
         <div><div class="rm-title">Solution Architect</div><div style="font-size:11px;color:#8A8FA0;">12,847 open roles</div></div>
         <div class="rm-pct">95%</div>
       </div>
@@ -809,8 +940,443 @@ function loadPhoto() {
 }
 
 // ─── INIT ───────────────────────────────────────
+
+// ─── ROLE PREFERENCES ─────────────────────────
+const ALL_ROLES = [
+  {name:'Solution Architect', icon:'🏗', count:'12,847 jobs'},
+  {name:'Product Manager', icon:'📋', count:'31,204 jobs'},
+  {name:'Project Planner', icon:'📅', count:'8,932 jobs'},
+  {name:'UX Designer', icon:'🎨', count:'15,621 jobs'},
+  {name:'Data Analyst', icon:'📊', count:'22,445 jobs'},
+  {name:'DevOps Engineer', icon:'⚙️', count:'18,330 jobs'},
+  {name:'Scrum Master', icon:'🔄', count:'7,218 jobs'},
+  {name:'Brand Strategist', icon:'💡', count:'4,891 jobs'},
+  {name:'Software Engineer', icon:'💻', count:'45,232 jobs'},
+  {name:'Data Scientist', icon:'🔬', count:'12,109 jobs'},
+  {name:'Cloud Architect', icon:'☁️', count:'9,873 jobs'},
+  {name:'Business Analyst', icon:'📈', count:'14,556 jobs'},
+  {name:'Cybersecurity Analyst', icon:'🔒', count:'11,087 jobs'},
+  {name:'Engineering Manager', icon:'👷', count:'6,543 jobs'},
+  {name:'Technical Program Manager', icon:'🗂', count:'6,234 jobs'},
+];
+
+const AI_SUGGESTED = [
+  {name:'Cloud Architect', icon:'☁️', count:'9,873 jobs'},
+  {name:'Technical Program Manager', icon:'🗂', count:'6,234 jobs'},
+  {name:'DevOps Engineer', icon:'⚙️', count:'18,330 jobs'},
+];
+
+let selectedRoles = [
+  {name:'Solution Architect', icon:'🏗'},
+  {name:'Product Manager', icon:'📋'},
+  {name:'Project Planner', icon:'📅'},
+];
+
+function renderRolePrefs() {
+  const container = document.getElementById('role-prefs-list');
+  if (!container) return;
+  container.innerHTML = selectedRoles.map((r,i) => `
+    <div class="role-pref-card" id="rpc-${i}">
+      <div class="rpc-header">
+        <span style="font-size:18px;">${r.icon}</span>
+        <div class="rpc-title">${r.name}</div>
+        <button class="rpc-remove" onclick="removeRoleCard(${i})">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="rpc-body">
+        <div class="pref-label">Work location</div>
+        <div class="pref-chips-row">
+          <div class="pchip on" onclick="togglePchip(this)">🏠 Remote</div>
+          <div class="pchip on" onclick="togglePchip(this)">🔀 Hybrid</div>
+          <div class="pchip" onclick="togglePchip(this)">🏢 On-site</div>
+        </div>
+        <div class="pref-label">Schedule</div>
+        <div class="pref-chips-row">
+          <div class="pchip on" onclick="togglePchip(this)">Full-time</div>
+          <div class="pchip" onclick="togglePchip(this)">Part-time</div>
+          <div class="pchip" onclick="togglePchip(this)">Contract</div>
+          <div class="pchip" onclick="togglePchip(this)">Freelance</div>
+        </div>
+        <div class="pref-label">Expected salary (USD / year)</div>
+        <div class="sal-row">
+          <div class="sal-prefix">$</div>
+          <input class="sal-input" type="number" placeholder="120,000" value="150000"/>
+          <div class="sal-suffix">– </div>
+          <div class="sal-prefix">$</div>
+          <input class="sal-input" type="number" placeholder="200,000" value="200000"/>
+          <div class="sal-suffix">/ yr</div>
+        </div>
+        <div class="pref-label">Start availability</div>
+        <div class="pref-chips-row">
+          <div class="pchip on" onclick="togglePchip(this)">Immediately</div>
+          <div class="pchip" onclick="togglePchip(this)">2 weeks</div>
+          <div class="pchip" onclick="togglePchip(this)">1 month</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  // show AI suggestions after 3 roles
+  if (selectedRoles.length >= 3) showAISuggestions();
+}
+
+function togglePchip(el) {
+  el.classList.toggle('on');
+}
+
+function removeRoleCard(i) {
+  selectedRoles.splice(i, 1);
+  renderRolePrefs();
+}
+
+function filterRoles(query) {
+  const dropdown = document.getElementById('role-suggestions');
+  const wrap = document.getElementById('role-input-wrap');
+  if (!query || query.length < 1) { dropdown.style.display='none'; wrap.style.borderColor='#E0DBD0'; return; }
+  wrap.style.borderColor = '#2952B3';
+  const q = query.toLowerCase();
+  const existing = selectedRoles.map(r => r.name);
+  const matches = ALL_ROLES.filter(r => r.name.toLowerCase().includes(q) && !existing.includes(r.name)).slice(0,5);
+  const items = matches.length ? matches : [{name:query, icon:'💼', count:'Custom role'}];
+  dropdown.innerHTML = items.map(r =>
+    `<div class="suggest-item" onclick="addRoleFromSearch('${r.name}','${r.icon}')">
+      <span class="suggest-icon">${r.icon}</span>
+      <span class="suggest-name">${r.name}</span>
+      <span class="suggest-count">${r.count||'Custom'}</span>
+    </div>`
+  ).join('');
+  dropdown.style.display = 'block';
+}
+
+function handleRoleKey(e) {
+  if (e.key === 'Enter') {
+    const val = document.getElementById('role-search').value.trim();
+    if (val) addRoleFromSearch(val, '💼');
+  }
+}
+
+function addRoleFromSearch(name, icon) {
+  if (!selectedRoles.find(r => r.name === name)) {
+    selectedRoles.push({name, icon});
+    renderRolePrefs();
+    showToast('Added: ' + name + ' ✅');
+  }
+  document.getElementById('role-search').value = '';
+  document.getElementById('role-suggestions').style.display = 'none';
+  document.getElementById('role-input-wrap').style.borderColor = '#E0DBD0';
+}
+
+function showAISuggestions() {
+  const section = document.getElementById('ai-suggested-section');
+  const container = document.getElementById('ai-suggested-roles');
+  if (!section || !container) return;
+  const existing = selectedRoles.map(r => r.name);
+  const toShow = AI_SUGGESTED.filter(r => !existing.includes(r.name));
+  if (!toShow.length) return;
+  container.innerHTML = toShow.map(r =>
+    `<div class="role-pill ai-suggest" onclick="addRoleFromSearch('${r.name}','${r.icon}')">${r.icon} ${r.name} <span style="font-size:10px;opacity:0.6;margin-left:3px;">+ Add</span></div>`
+  ).join('');
+  section.style.display = 'block';
+}
+
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('#role-input-wrap') && !e.target.closest('#role-suggestions')) {
+    const d = document.getElementById('role-suggestions');
+    if (d) d.style.display = 'none';
+  }
+});
+
+// ─── SKILLS BANK ───────────────────────────────
+const SKILLS_DB = [
+  {name:'Cloud architecture (AWS/Azure)', cat:'technical', freq:89, badge:'hot', icon:'☁️'},
+  {name:'Stakeholder management', cat:'leadership', freq:88, badge:'hot', icon:'👥'},
+  {name:'System design & APIs', cat:'technical', freq:78, badge:'hot', icon:'🔧'},
+  {name:'Agile / Scrum delivery', cat:'strategy', freq:84, badge:'hot', icon:'🔄'},
+  {name:'Product roadmapping', cat:'strategy', freq:91, badge:'hot', icon:'📋'},
+  {name:'AI / LLM literacy', cat:'technical', freq:68, badge:'new', icon:'🤖'},
+  {name:'Terraform / Infrastructure as Code', cat:'technical', freq:64, badge:'rising', icon:'⚙️'},
+  {name:'Kubernetes / Containers', cat:'technical', freq:58, badge:'rising', icon:'🐳'},
+  {name:'Data analytics (SQL/Python)', cat:'data', freq:76, badge:'rising', icon:'📊'},
+  {name:'Risk management', cat:'strategy', freq:62, badge:'', icon:'🛡'},
+  {name:'Budget management', cat:'strategy', freq:55, badge:'', icon:'💰'},
+  {name:'User research & UX', cat:'design', freq:48, badge:'', icon:'🎨'},
+  {name:'Executive communication', cat:'leadership', freq:71, badge:'', icon:'📢'},
+  {name:'Technical writing & documentation', cat:'technical', freq:45, badge:'', icon:'✍️'},
+  {name:'Security & compliance (IAM)', cat:'technical', freq:71, badge:'hot', icon:'🔒'},
+  {name:'Vendor management', cat:'leadership', freq:52, badge:'', icon:'🤝'},
+  {name:'OKR / Goal setting', cat:'strategy', freq:60, badge:'', icon:'🎯'},
+  {name:'Power BI / Tableau', cat:'data', freq:54, badge:'', icon:'📈'},
+  {name:'Machine learning basics', cat:'data', freq:42, badge:'rising', icon:'🧠'},
+  {name:'Change management', cat:'leadership', freq:58, badge:'', icon:'🔀'},
+];
+
+let selectedSkills = {};
+let currentSkillCat = 'all';
+
+function renderSkills(filter) {
+  const list = document.getElementById('skills-list');
+  if (!list) return;
+  const skills = SKILLS_DB.filter(s => {
+    if (currentSkillCat !== 'all' && s.cat !== currentSkillCat) return false;
+    if (filter && !s.name.toLowerCase().includes(filter.toLowerCase())) return false;
+    return true;
+  });
+  list.innerHTML = skills.map(s => {
+    const checked = selectedSkills[s.name] !== undefined;
+    const strength = selectedSkills[s.name] || 50;
+    const level = strength >= 90 ? 'Expert' : strength >= 70 ? 'Advanced' : strength >= 40 ? 'Intermediate' : 'Beginner';
+    const badgeHtml = s.badge ? `<span class="sk-badge ${s.badge}">${s.badge==='hot'?'🔥 Hot':s.badge==='rising'?'📈 Rising':'🆕 New'}</span>` : '';
+    return `<div class="sk-card ${checked?'checked':''}" id="sk-${s.name.replace(/[^a-z]/gi,'_')}">
+      <div class="sk-top">
+        <div class="sk-ico" style="background:${checked?'rgba(41,82,179,0.1)':'#F8F6F1'};">
+          <span style="font-size:16px;">${s.icon}</span>
+        </div>
+        <div class="sk-info">
+          <div class="sk-name">${s.name}</div>
+          <div class="sk-meta">
+            <div class="sk-freq-bar"><div class="sk-freq-fill" style="width:${s.freq}%;"></div></div>
+            <div class="sk-pct">${s.freq}% of jobs</div>
+            ${badgeHtml}
+          </div>
+        </div>
+        <div class="sk-check" onclick="toggleSkill('${s.name}',this)">
+          ${checked?'<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>':''}
+        </div>
+      </div>
+      ${checked ? `
+      <div class="sk-slider-wrap">
+        <div class="sk-strength-display">
+          <div class="sk-strength-label">${level}</div>
+          <div class="sk-strength-pct">${strength}%</div>
+        </div>
+        <input type="range" class="sk-slider" min="0" max="100" value="${strength}"
+          style="background:linear-gradient(to right,#2952B3 ${strength}%,#E0DBD0 ${strength}%);"
+          oninput="updateSkillStrength('${s.name}',this)"/>
+        <div class="strength-levels">
+          <span class="strength-level ${strength<40?'active':''}">Beginner</span>
+          <span class="strength-level ${strength>=40&&strength<70?'active':''}">Intermediate</span>
+          <span class="strength-level ${strength>=70&&strength<90?'active':''}">Advanced</span>
+          <span class="strength-level ${strength>=90?'active':''}">Expert</span>
+        </div>
+      </div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function toggleSkill(name, checkEl) {
+  const card = checkEl.closest('.sk-card');
+  if (selectedSkills[name] !== undefined) {
+    delete selectedSkills[name];
+    card.classList.remove('checked');
+    showToast(name + ' removed');
+  } else {
+    selectedSkills[name] = 70;
+    card.classList.add('checked');
+    showToast(name + ' added ✅');
+  }
+  renderSkills();
+}
+
+function updateSkillStrength(name, input) {
+  const val = parseInt(input.value);
+  selectedSkills[name] = val;
+  input.style.background = `linear-gradient(to right,#2952B3 ${val}%,#E0DBD0 ${val}%)`;
+  const level = val >= 90 ? 'Expert' : val >= 70 ? 'Advanced' : val >= 40 ? 'Intermediate' : 'Beginner';
+  const card = input.closest('.sk-card');
+  if (card) {
+    card.querySelector('.sk-strength-label').textContent = level;
+    card.querySelector('.sk-strength-pct').textContent = val + '%';
+    // Update active level labels
+    card.querySelectorAll('.strength-level').forEach(el => el.classList.remove('active'));
+    const levels = card.querySelectorAll('.strength-level');
+    if (val < 40 && levels[0]) levels[0].classList.add('active');
+    else if (val < 70 && levels[1]) levels[1].classList.add('active');
+    else if (val < 90 && levels[2]) levels[2].classList.add('active');
+    else if (levels[3]) levels[3].classList.add('active');
+  }
+}
+
+function setSkillCat(el, cat) {
+  document.querySelectorAll('.scat').forEach(e => e.classList.remove('on'));
+  el.classList.add('on');
+  currentSkillCat = cat;
+  renderSkills();
+}
+
+function filterSkills(query) {
+  renderSkills(query);
+}
+
+function addCustomSkill() {
+  const name = prompt('Enter skill name:');
+  if (name && name.trim()) {
+    SKILLS_DB.unshift({name:name.trim(), cat:'technical', freq:0, badge:'', icon:'⭐'});
+    renderSkills();
+    showToast('Custom skill added: ' + name.trim());
+  }
+}
+
+// ─── PHOTO UPLOAD ──────────────────────────────
+function handlePhotoUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const preview = document.getElementById('av-preview');
+    const icon = document.getElementById('av-icon');
+    const hint = document.getElementById('av-hint');
+    const verifyBtn = document.getElementById('av-verify-btn');
+    if (preview) { preview.src = e.target.result; preview.style.display = 'block'; }
+    if (icon) icon.style.display = 'none';
+    if (hint) hint.textContent = 'Photo added ✅ Now record verification video';
+    if (verifyBtn) verifyBtn.style.display = 'block';
+    // Store photo globally
+    window.userPhoto = e.target.result;
+    showToast('Photo uploaded! Now record a verification video 🎥');
+  };
+  reader.readAsDataURL(file);
+}
+
+function startVideoVerify() {
+  // Check if getUserMedia is available
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    showToast('Opening camera for 5-second verification... 🎥');
+    // In a real app this would open camera recording
+    // For prototype, simulate verification after 2 seconds
+    setTimeout(() => {
+      document.getElementById('av-hint').textContent = '✅ Photo + Video verified!';
+      document.getElementById('av-verify-btn').innerHTML = '<div style="text-align:center;font-size:13px;font-weight:600;color:#2A7D52;">✅ Identity verified</div>';
+      showToast('Identity verified! 🎉');
+    }, 2000);
+  } else {
+    showToast('Camera not available on this device');
+  }
+}
+
+// ─── ROLE SEARCH ───────────────────────────────
+const ALL_ROLES = [
+  {name:'Solution Architect', icon:'🏗', count:'12,847 jobs'},
+  {name:'Product Manager', icon:'📋', count:'31,204 jobs'},
+  {name:'Project Planner', icon:'📅', count:'8,932 jobs'},
+  {name:'UX Designer', icon:'🎨', count:'15,621 jobs'},
+  {name:'Data Analyst', icon:'📊', count:'22,445 jobs'},
+  {name:'DevOps Engineer', icon:'⚙️', count:'18,330 jobs'},
+  {name:'Scrum Master', icon:'🔄', count:'7,218 jobs'},
+  {name:'Brand Strategist', icon:'💡', count:'4,891 jobs'},
+  {name:'Software Engineer', icon:'💻', count:'45,232 jobs'},
+  {name:'Data Scientist', icon:'🔬', count:'12,109 jobs'},
+  {name:'Cloud Architect', icon:'☁️', count:'9,873 jobs'},
+  {name:'Marketing Manager', icon:'📣', count:'19,442 jobs'},
+  {name:'Business Analyst', icon:'📈', count:'14,556 jobs'},
+  {name:'Technical Writer', icon:'✍️', count:'3,221 jobs'},
+  {name:'Cybersecurity Analyst', icon:'🔒', count:'11,087 jobs'},
+  {name:'Agile Coach', icon:'🏃', count:'2,341 jobs'},
+  {name:'Product Designer', icon:'🖌', count:'8,762 jobs'},
+  {name:'Engineering Manager', icon:'👷', count:'6,543 jobs'},
+  {name:'Sales Engineer', icon:'🤝', count:'9,123 jobs'},
+  {name:'Research Scientist', icon:'🧪', count:'5,432 jobs'},
+];
+
+const AI_SUGGESTED = [
+  {name:'Cloud Architect', icon:'☁️', count:'9,873 jobs'},
+  {name:'Technical Program Manager', icon:'🗂', count:'6,234 jobs'},
+  {name:'DevOps Engineer', icon:'⚙️', count:'18,330 jobs'},
+];
+
+let selectedRoles = ['Solution Architect', 'Product Manager', 'Project Planner'];
+
+function filterRoles(query) {
+  const dropdown = document.getElementById('role-suggestions');
+  const wrap = document.getElementById('role-input-wrap');
+  if (!query || query.length < 1) {
+    dropdown.style.display = 'none';
+    wrap.style.borderColor = '#E0DBD0';
+    return;
+  }
+  wrap.style.borderColor = '#2952B3';
+  const q = query.toLowerCase();
+  const matches = ALL_ROLES.filter(r =>
+    r.name.toLowerCase().includes(q) && !selectedRoles.includes(r.name)
+  ).slice(0, 6);
+  if (matches.length === 0) {
+    // Allow adding custom role
+    dropdown.innerHTML = '<div class="suggest-item" onclick="addRole(\'' + query + '\', \'💼\', \'Custom role\')"><span class="suggest-icon">➕</span><span class="suggest-name">Add "' + query + '"</span><span class="suggest-count">Custom role</span></div>';
+  } else {
+    dropdown.innerHTML = matches.map(r =>
+      '<div class="suggest-item" onclick="addRole(\'' + r.name + '\',\'' + r.icon + '\',\'' + r.count + '\')">' +
+      '<span class="suggest-icon">' + r.icon + '</span>' +
+      '<span class="suggest-name">' + r.name + '</span>' +
+      '<span class="suggest-count">' + r.count + '</span></div>'
+    ).join('');
+  }
+  dropdown.style.display = 'block';
+}
+
+function handleRoleKey(e) {
+  if (e.key === 'Enter') {
+    const val = document.getElementById('role-search').value.trim();
+    if (val) { addRole(val, '💼', 'Custom role'); }
+  }
+}
+
+function addRole(name, icon, count) {
+  if (selectedRoles.includes(name)) { closeDropdown(); return; }
+  selectedRoles.push(name);
+  const container = document.getElementById('selected-roles');
+  const pill = document.createElement('div');
+  pill.className = 'role-pill desired';
+  pill.setAttribute('data-role', name);
+  pill.setAttribute('onclick', 'removeRole(this)');
+  pill.innerHTML = icon + ' ' + name + ' <span style="opacity:0.6;margin-left:4px;">×</span>';
+  container.appendChild(pill);
+  closeDropdown();
+  document.getElementById('role-search').value = '';
+  document.getElementById('role-input-wrap').style.borderColor = '#E0DBD0';
+  showToast('Added: ' + name + ' ✅');
+  // Show AI suggestions after 3+ roles
+  if (selectedRoles.length >= 3) showAISuggestions();
+}
+
+function removeRole(el) {
+  const role = el.getAttribute('data-role');
+  selectedRoles = selectedRoles.filter(r => r !== role);
+  el.remove();
+}
+
+function closeDropdown() {
+  const d = document.getElementById('role-suggestions');
+  if (d) d.style.display = 'none';
+}
+
+function showAISuggestions() {
+  const section = document.getElementById('ai-suggested-section');
+  const container = document.getElementById('ai-suggested-roles');
+  if (!section || !container) return;
+  const toShow = AI_SUGGESTED.filter(r => !selectedRoles.includes(r.name));
+  if (toShow.length === 0) return;
+  container.innerHTML = toShow.map(r =>
+    '<div class="role-pill ai-suggest" onclick="addAISuggestedRole(this,\'' + r.name + '\',\'' + r.icon + '\',\'' + r.count + '\')">' +
+    r.icon + ' ' + r.name + ' <span style="font-size:10px;opacity:0.6;margin-left:4px;">+ Add</span></div>'
+  ).join('');
+  section.style.display = 'block';
+}
+
+function addAISuggestedRole(el, name, icon, count) {
+  el.remove();
+  addRole(name, icon, count);
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('#role-input-wrap') && !e.target.closest('#role-suggestions')) {
+    closeDropdown();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   renderJob();
+  renderRolePrefs();
+  renderSkills();
   // Tab items need data-tab attributes
   document.querySelectorAll('.tab-item').forEach(function(el) {
     const oc = el.getAttribute('onclick');
