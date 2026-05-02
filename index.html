@@ -26,7 +26,7 @@ body{font-family:var(--fb);color:var(--navy);}
 #app{width:100%;height:100%;position:relative;overflow:hidden;}
 .screen{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--cream);transform:translateX(100%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);overflow:hidden;}
 .screen.active{transform:translateX(0);}
-.screen.exit{transform:translateX(-30%);}
+
 
 /* SAFE AREA */
 .safe-top{padding-top:calc(var(--safe-top) + 8px);}
@@ -751,23 +751,25 @@ input[type=range].str-slider::-webkit-slider-thumb{-webkit-appearance:none;width
 
 <script>
 // ─── NAVIGATION ───────────────────────────────
-const history = [];
+const navHistory = [];
 let current = 's-splash';
 
 function goTo(id) {
   const prev = document.getElementById(current);
   const next = document.getElementById(id);
   if (!next || id === current) return;
-  prev.classList.add('exit');
   next.classList.add('active');
-  setTimeout(() => { prev.classList.remove('active','exit'); }, 380);
-  history.push(current);
+  const oldCurrent = current;
   current = id;
+  navHistory.push(oldCurrent);
+  setTimeout(() => { 
+    prev.classList.remove('active');
+  }, 350);
 }
 
 function goBack() {
-  if (history.length === 0) return;
-  const prev = history.pop();
+  if (navHistory.length === 0) return;
+  const prev = navHistory.pop();
   const curr = document.getElementById(current);
   const prevEl = document.getElementById(prev);
   curr.style.transform = 'translateX(100%)';
