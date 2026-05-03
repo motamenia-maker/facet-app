@@ -382,7 +382,7 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
   </div>
   <div class="bottom">
     <div class="dots"><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
-    <button class="btn btn-navy" onclick="goTo('s-skills')">Build skills bank <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+    <button class="btn btn-navy" onclick="goTo('s-skills')">Continue <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
   </div>
 </div>
 
@@ -426,7 +426,7 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
   </div>
   <div class="bottom">
     <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div>
-    <button class="btn btn-navy" onclick="goTo('s-airmatch')">See my role matches <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+    <button class="btn btn-navy" onclick="goTo('s-lifeskills')">Add life skills &amp; gigs <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
   </div>
 </div>
 
@@ -667,6 +667,18 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
       <div class="stat-card"><div class="val">13</div><div class="lbl">Reviews</div></div>
       <div class="stat-card"><div class="val">95%</div><div class="lbl">Top match</div></div>
     </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;">
+      <div onclick="goTo('s-lifeskills')" style="background:#fff;border:1.5px solid #E0DBD0;border-radius:13px;padding:12px;cursor:pointer;display:flex;align-items:center;gap:8px;">
+        <div style="font-size:20px;">🐾</div>
+        <div><div style="font-size:12px;font-weight:600;color:#0F1F3D;">Life skills</div><div style="font-size:10px;color:#8A8FA0;margin-top:1px;">Gig services</div></div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8A8FA0" stroke-width="2" style="margin-left:auto;"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+      <div onclick="goTo('s-map')" style="background:#fff;border:1.5px solid #E0DBD0;border-radius:13px;padding:12px;cursor:pointer;display:flex;align-items:center;gap:8px;">
+        <div style="font-size:20px;">🗺</div>
+        <div><div style="font-size:12px;font-weight:600;color:#0F1F3D;">Gig map</div><div style="font-size:10px;color:#8A8FA0;margin-top:1px;">Nearby requests</div></div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8A8FA0" stroke-width="2" style="margin-left:auto;"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+    </div>
     <div class="sec">Reviews</div>
     <div class="rv-card">
       <div class="rv-top">
@@ -722,7 +734,7 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
   </div>
   <div class="bottom">
     <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot on"></div><div class="dot"></div></div>
-    <button class="btn btn-navy" onclick="goTo('s-lifeskills')">Continue to life skills <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+    <button class="btn btn-navy" onclick="goTo('s-airmatch')">Continue to AI match <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
   </div>
 </div>
 
