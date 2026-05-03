@@ -461,9 +461,43 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
         <div class="rm-pct">95%</div>
       </div>
       <div class="rm-bar"><div class="rm-bar-fill" style="width:95%"></div></div>
-      <div class="rm-desc">Your cloud, system design and stakeholder skills match 12,847 open roles. Excellent fit.</div>
-      <button class="rm-cta" onclick="goTo('s-home')">Find Solution Architect roles</button>
+
+      <!-- Matched skills -->
+      <div style="margin-bottom:10px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">Your matched skills</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;">
+          <span style="font-size:11px;font-weight:600;background:rgba(42,125,82,0.2);color:#6FCF97;border-radius:6px;padding:3px 9px;">☁️ Cloud arch. ✓</span>
+          <span style="font-size:11px;font-weight:600;background:rgba(42,125,82,0.2);color:#6FCF97;border-radius:6px;padding:3px 9px;">🔧 System design ✓</span>
+          <span style="font-size:11px;font-weight:600;background:rgba(42,125,82,0.2);color:#6FCF97;border-radius:6px;padding:3px 9px;">👥 Stakeholder mgmt ✓</span>
+          <span style="font-size:11px;font-weight:600;background:rgba(42,125,82,0.2);color:#6FCF97;border-radius:6px;padding:3px 9px;">🔄 Agile ✓</span>
+        </div>
+      </div>
+
+      <!-- Skill gap -->
+      <div style="background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:12px;margin-bottom:10px;">
+        <div style="font-size:11px;font-weight:700;color:#C9A84C;margin-bottom:8px;">🎯 Add these to reach 100%</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.85);flex:1;">🔒 Security &amp; IAM</span>
+            <span style="font-size:10px;color:#C9A84C;font-weight:600;">71% of jobs</span>
+            <a href="https://www.youtube.com/results?search_query=AWS+IAM+security+tutorial" target="_blank" style="display:flex;align-items:center;gap:4px;background:rgba(255,0,0,0.15);border:1px solid rgba(255,0,0,0.3);border-radius:8px;padding:4px 9px;text-decoration:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="red"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-2.75 4.83 4.83 0 0 0-4.75-2.37A4.83 4.83 0 0 0 7.34 4.4 4.83 4.83 0 0 1 4 6.69a4.83 4.83 0 0 0-2.37 4.75 4.83 4.83 0 0 0 2.75 3.77 4.83 4.83 0 0 1 2.37 4.75 4.83 4.83 0 0 0 4.75 2.37 4.83 4.83 0 0 0 3.77-2.75 4.83 4.83 0 0 1 4.75-2.37A4.83 4.83 0 0 0 22 14.21a4.83 4.83 0 0 0-2.41-7.52z"/></svg>
+              <span style="font-size:10px;font-weight:600;color:#fff;">Learn</span>
+            </a>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.85);flex:1;">⚙️ Terraform / IaC</span>
+            <span style="font-size:10px;color:#C9A84C;font-weight:600;">64% of jobs</span>
+            <a href="https://www.youtube.com/results?search_query=Terraform+tutorial+beginner" target="_blank" style="display:flex;align-items:center;gap:4px;background:rgba(255,0,0,0.15);border:1px solid rgba(255,0,0,0.3);border-radius:8px;padding:4px 9px;text-decoration:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="red"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-2.75 4.83 4.83 0 0 0-4.75-2.37A4.83 4.83 0 0 0 7.34 4.4 4.83 4.83 0 0 1 4 6.69a4.83 4.83 0 0 0-2.37 4.75 4.83 4.83 0 0 0 2.75 3.77 4.83 4.83 0 0 1 2.37 4.75 4.83 4.83 0 0 0 4.75 2.37 4.83 4.83 0 0 0 3.77-2.75 4.83 4.83 0 0 1 4.75-2.37A4.83 4.83 0 0 0 22 14.21a4.83 4.83 0 0 0-2.41-7.52z"/></svg>
+              <span style="font-size:10px;font-weight:600;color:#fff;">Learn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="rm-cta" onclick="goTo('s-home')">Find Solution Architect roles →</button>
     </div>
+
     <div class="rm rm-2">
       <div class="rm-rank">🥈 Strong match</div>
       <div class="rm-top">
@@ -472,9 +506,50 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
         <div class="rm-pct">65%</div>
       </div>
       <div class="rm-bar"><div class="rm-bar-fill" style="width:65%"></div></div>
-      <div class="rm-desc">Add A/B testing and user research to boost to 85%.</div>
-      <button class="rm-cta" onclick="goTo('s-home')">Find Product Manager roles</button>
+
+      <!-- Matched skills -->
+      <div style="margin-bottom:10px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">Your matched skills</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;">
+          <span style="font-size:11px;font-weight:600;background:rgba(42,125,82,0.2);color:#6FCF97;border-radius:6px;padding:3px 9px;">📋 Roadmapping ✓</span>
+          <span style="font-size:11px;font-weight:600;background:rgba(42,125,82,0.2);color:#6FCF97;border-radius:6px;padding:3px 9px;">👥 Stakeholder ✓</span>
+          <span style="font-size:11px;font-weight:600;background:rgba(42,125,82,0.2);color:#6FCF97;border-radius:6px;padding:3px 9px;">🔄 Agile ✓</span>
+        </div>
+      </div>
+
+      <!-- Skill gap -->
+      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:12px;margin-bottom:10px;">
+        <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.8);margin-bottom:8px;">🎯 Add these to reach 85%</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.85);flex:1;">📊 Data analytics</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.5);font-weight:600;">76% of jobs</span>
+            <a href="https://www.youtube.com/results?search_query=SQL+for+product+managers+tutorial" target="_blank" style="display:flex;align-items:center;gap:4px;background:rgba(255,0,0,0.15);border:1px solid rgba(255,0,0,0.3);border-radius:8px;padding:4px 9px;text-decoration:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="red"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-2.75 4.83 4.83 0 0 0-4.75-2.37A4.83 4.83 0 0 0 7.34 4.4 4.83 4.83 0 0 1 4 6.69a4.83 4.83 0 0 0-2.37 4.75 4.83 4.83 0 0 0 2.75 3.77 4.83 4.83 0 0 1 2.37 4.75 4.83 4.83 0 0 0 4.75 2.37 4.83 4.83 0 0 0 3.77-2.75 4.83 4.83 0 0 1 4.75-2.37A4.83 4.83 0 0 0 22 14.21a4.83 4.83 0 0 0-2.41-7.52z"/></svg>
+              <span style="font-size:10px;font-weight:600;color:#fff;">Learn</span>
+            </a>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.85);flex:1;">🤖 AI literacy</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.5);font-weight:600;">68% of jobs</span>
+            <a href="https://www.youtube.com/results?search_query=AI+for+product+managers+2024" target="_blank" style="display:flex;align-items:center;gap:4px;background:rgba(255,0,0,0.15);border:1px solid rgba(255,0,0,0.3);border-radius:8px;padding:4px 9px;text-decoration:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="red"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-2.75 4.83 4.83 0 0 0-4.75-2.37A4.83 4.83 0 0 0 7.34 4.4 4.83 4.83 0 0 1 4 6.69a4.83 4.83 0 0 0-2.37 4.75 4.83 4.83 0 0 0 2.75 3.77 4.83 4.83 0 0 1 2.37 4.75 4.83 4.83 0 0 0 4.75 2.37 4.83 4.83 0 0 0 3.77-2.75 4.83 4.83 0 0 1 4.75-2.37A4.83 4.83 0 0 0 22 14.21a4.83 4.83 0 0 0-2.41-7.52z"/></svg>
+              <span style="font-size:10px;font-weight:600;color:#fff;">Learn</span>
+            </a>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.85);flex:1;">🧪 A/B testing</span>
+            <span style="font-size:10px;color:rgba(255,255,255,0.5);font-weight:600;">61% of jobs</span>
+            <a href="https://www.youtube.com/results?search_query=A/B+testing+product+manager+tutorial" target="_blank" style="display:flex;align-items:center;gap:4px;background:rgba(255,0,0,0.15);border:1px solid rgba(255,0,0,0.3);border-radius:8px;padding:4px 9px;text-decoration:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="red"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-2.75 4.83 4.83 0 0 0-4.75-2.37A4.83 4.83 0 0 0 7.34 4.4 4.83 4.83 0 0 1 4 6.69a4.83 4.83 0 0 0-2.37 4.75 4.83 4.83 0 0 0 2.75 3.77 4.83 4.83 0 0 1 2.37 4.75 4.83 4.83 0 0 0 4.75 2.37 4.83 4.83 0 0 0 3.77-2.75 4.83 4.83 0 0 1 4.75-2.37A4.83 4.83 0 0 0 22 14.21a4.83 4.83 0 0 0-2.41-7.52z"/></svg>
+              <span style="font-size:10px;font-weight:600;color:#fff;">Learn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="rm-cta" onclick="goTo('s-home')">Find Product Manager roles →</button>
     </div>
+
     <div class="rm rm-3">
       <div class="rm-rank">🥉 Partial match</div>
       <div class="rm-top">
@@ -483,8 +558,47 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
         <div class="rm-pct">60%</div>
       </div>
       <div class="rm-bar"><div class="rm-bar-fill" style="width:60%"></div></div>
-      <div class="rm-desc">Add MS Project and budget management to boost to 80%.</div>
-      <button class="rm-cta" onclick="goTo('s-home')">Find Project Planner roles</button>
+
+      <!-- Matched skills -->
+      <div style="margin-bottom:10px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8A8FA0;margin-bottom:6px;">Your matched skills</div>
+        <div style="display:flex;flex-wrap:wrap;gap:5px;">
+          <span style="font-size:11px;font-weight:600;background:rgba(42,125,82,0.1);color:#2A7D52;border-radius:6px;padding:3px 9px;">🔄 Agile delivery ✓</span>
+          <span style="font-size:11px;font-weight:600;background:rgba(42,125,82,0.1);color:#2A7D52;border-radius:6px;padding:3px 9px;">🛡 Risk mgmt ✓</span>
+        </div>
+      </div>
+
+      <!-- Skill gap -->
+      <div style="background:rgba(74,143,231,0.08);border:1px solid rgba(74,143,231,0.2);border-radius:12px;padding:12px;margin-bottom:10px;">
+        <div style="font-size:11px;font-weight:700;color:#4A8FE7;margin-bottom:8px;">🎯 Add these to reach 80%</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:12px;font-weight:600;color:#0F1F3D;flex:1;">💰 Budget management</span>
+            <span style="font-size:10px;color:#8A8FA0;font-weight:600;">55% of jobs</span>
+            <a href="https://www.youtube.com/results?search_query=project+budget+management+tutorial" target="_blank" style="display:flex;align-items:center;gap:4px;background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.25);border-radius:8px;padding:4px 9px;text-decoration:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="red"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-2.75 4.83 4.83 0 0 0-4.75-2.37A4.83 4.83 0 0 0 7.34 4.4 4.83 4.83 0 0 1 4 6.69a4.83 4.83 0 0 0-2.37 4.75 4.83 4.83 0 0 0 2.75 3.77 4.83 4.83 0 0 1 2.37 4.75 4.83 4.83 0 0 0 4.75 2.37 4.83 4.83 0 0 0 3.77-2.75 4.83 4.83 0 0 1 4.75-2.37A4.83 4.83 0 0 0 22 14.21a4.83 4.83 0 0 0-2.41-7.52z"/></svg>
+              <span style="font-size:10px;font-weight:600;color:#E8472A;">Learn</span>
+            </a>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:12px;font-weight:600;color:#0F1F3D;flex:1;">📅 MS Project / Asana</span>
+            <span style="font-size:10px;color:#8A8FA0;font-weight:600;">52% of jobs</span>
+            <a href="https://www.youtube.com/results?search_query=Microsoft+Project+tutorial+beginners" target="_blank" style="display:flex;align-items:center;gap:4px;background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.25);border-radius:8px;padding:4px 9px;text-decoration:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="red"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-2.75 4.83 4.83 0 0 0-4.75-2.37A4.83 4.83 0 0 0 7.34 4.4 4.83 4.83 0 0 1 4 6.69a4.83 4.83 0 0 0-2.37 4.75 4.83 4.83 0 0 0 2.75 3.77 4.83 4.83 0 0 1 2.37 4.75 4.83 4.83 0 0 0 4.75 2.37 4.83 4.83 0 0 0 3.77-2.75 4.83 4.83 0 0 1 4.75-2.37A4.83 4.83 0 0 0 22 14.21a4.83 4.83 0 0 0-2.41-7.52z"/></svg>
+              <span style="font-size:10px;font-weight:600;color:#E8472A;">Learn</span>
+            </a>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:12px;font-weight:600;color:#0F1F3D;flex:1;">🗂 WBS &amp; scheduling</span>
+            <span style="font-size:10px;color:#8A8FA0;font-weight:600;">48% of jobs</span>
+            <a href="https://www.youtube.com/results?search_query=work+breakdown+structure+WBS+tutorial" target="_blank" style="display:flex;align-items:center;gap:4px;background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.25);border-radius:8px;padding:4px 9px;text-decoration:none;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="red"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-2.75 4.83 4.83 0 0 0-4.75-2.37A4.83 4.83 0 0 0 7.34 4.4 4.83 4.83 0 0 1 4 6.69a4.83 4.83 0 0 0-2.37 4.75 4.83 4.83 0 0 0 2.75 3.77 4.83 4.83 0 0 1 2.37 4.75 4.83 4.83 0 0 0 4.75 2.37 4.83 4.83 0 0 0 3.77-2.75 4.83 4.83 0 0 1 4.75-2.37A4.83 4.83 0 0 0 22 14.21a4.83 4.83 0 0 0-2.41-7.52z"/></svg>
+              <span style="font-size:10px;font-weight:600;color:#E8472A;">Learn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="rm-cta" onclick="goTo('s-home')">Find Project Planner roles →</button>
     </div>
   </div>
   <div class="bottom">
@@ -518,15 +632,15 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;">
       <div onclick="goTo('s-public-profile')" style="background:#fff;border:1.5px solid #E0DBD0;border-radius:14px;padding:13px;cursor:pointer;display:flex;align-items:center;gap:9px;">
         <div style="width:34px;height:34px;border-radius:10px;background:rgba(41,82,179,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2952B3" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2952B3" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-        <div><div style="font-size:12px;font-weight:600;color:#0F1F3D;">Public profile</div><div style="font-size:10px;color:#8A8FA0;margin-top:1px;">What clients see</div></div>
+        <div><div style="font-size:12px;font-weight:600;color:#0F1F3D;">Pro profile</div><div style="font-size:10px;color:#8A8FA0;margin-top:1px;">Hiring managers</div></div>
       </div>
-      <div onclick="goTo('s-map')" style="background:#fff;border:1.5px solid #E0DBD0;border-radius:14px;padding:13px;cursor:pointer;display:flex;align-items:center;gap:9px;">
-        <div style="width:34px;height:34px;border-radius:10px;background:rgba(42,125,82,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A7D52" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.1 13.2 7.8 13.9a.3.3 0 0 0 .4 0C12.9 23.2 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+      <div onclick="goTo('s-public-gig-profile')" style="background:#fff;border:1.5px solid #E0DBD0;border-radius:14px;padding:13px;cursor:pointer;display:flex;align-items:center;gap:9px;">
+        <div style="width:34px;height:34px;border-radius:10px;background:rgba(201,168,76,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A6A1A" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </div>
-        <div><div style="font-size:12px;font-weight:600;color:#0F1F3D;">Gig map</div><div style="font-size:10px;color:#8A8FA0;margin-top:1px;">8 nearby requests</div></div>
+        <div><div style="font-size:12px;font-weight:600;color:#0F1F3D;">Gig profile</div><div style="font-size:10px;color:#8A8FA0;margin-top:1px;">Local clients</div></div>
       </div>
     </div>
     <div class="sec">Top match today</div>
@@ -547,6 +661,56 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
       </div>
       <div class="gig-dets"><span class="gd gd-blue">Sat–Sun</span><span class="gd gd-green">2 hrs/day</span><span class="gd gd-gold">$80 total</span></div>
     </div>
+    <div class="sec">Skill gaps to close</div>
+    <div style="background:#fff;border:1.5px solid #E0DBD0;border-radius:16px;overflow:hidden;margin-bottom:16px;">
+      <div style="background:linear-gradient(135deg,#0F1F3D,#1B3A7A);padding:12px 14px;display:flex;align-items:center;justify-content:space-between;">
+        <div style="font-size:13px;font-weight:600;color:#fff;">Your learning roadmap</div>
+        <div style="font-size:10px;font-weight:600;background:rgba(201,168,76,0.2);color:#C9A84C;border-radius:8px;padding:3px 9px;">3 gaps</div>
+      </div>
+      <div style="padding:12px;display:flex;flex-direction:column;gap:10px;">
+
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(232,71,42,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">🔒</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:600;color:#0F1F3D;">Security &amp; IAM</div>
+            <div style="font-size:10px;color:#8A8FA0;margin-top:1px;">Needed by 71% of Solution Architect roles</div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=AWS+IAM+security+tutorial" target="_blank" style="display:flex;align-items:center;gap:5px;background:#FF0000;border-radius:10px;padding:7px 12px;text-decoration:none;flex-shrink:0;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span style="font-size:11px;font-weight:600;color:#fff;">Watch</span>
+          </a>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(41,82,179,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">📊</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:600;color:#0F1F3D;">Data analytics (SQL)</div>
+            <div style="font-size:10px;color:#8A8FA0;margin-top:1px;">Needed by 76% of Product Manager roles</div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=SQL+for+product+managers" target="_blank" style="display:flex;align-items:center;gap:5px;background:#FF0000;border-radius:10px;padding:7px 12px;text-decoration:none;flex-shrink:0;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span style="font-size:11px;font-weight:600;color:#fff;">Watch</span>
+          </a>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(201,168,76,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">🤖</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:600;color:#0F1F3D;">AI / LLM literacy</div>
+            <div style="font-size:10px;color:#8A8FA0;margin-top:1px;">Fastest growing — up 68% in 6 months</div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=AI+literacy+for+professionals+2024" target="_blank" style="display:flex;align-items:center;gap:5px;background:#FF0000;border-radius:10px;padding:7px 12px;text-decoration:none;flex-shrink:0;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <span style="font-size:11px;font-weight:600;color:#fff;">Watch</span>
+          </a>
+        </div>
+
+      </div>
+      <div style="border-top:1px solid #F0EAE0;padding:10px 14px;">
+        <div onclick="goTo('s-airmatch')" style="font-size:12px;font-weight:600;color:#2952B3;text-align:center;cursor:pointer;">View full skill gap analysis →</div>
+      </div>
+    </div>
+
     <div class="sec">Latest review</div>
     <div class="rv-card" onclick="goTo('s-profile')">
       <div class="rv-top">
@@ -668,39 +832,79 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
       <div class="stat-card"><div class="val">95%</div><div class="lbl">Top match</div></div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;">
-      <div onclick="goTo('s-lifeskills')" style="background:#fff;border:1.5px solid #E0DBD0;border-radius:13px;padding:12px;cursor:pointer;display:flex;align-items:center;gap:8px;">
-        <div style="font-size:20px;">🐾</div>
-        <div><div style="font-size:12px;font-weight:600;color:#0F1F3D;">Life skills</div><div style="font-size:10px;color:#8A8FA0;margin-top:1px;">Gig services</div></div>
+      <div onclick="goTo('s-public-profile')" style="background:#fff;border:1.5px solid #E0DBD0;border-radius:13px;padding:12px;cursor:pointer;display:flex;align-items:center;gap:8px;">
+        <div style="font-size:20px;">💼</div>
+        <div><div style="font-size:12px;font-weight:600;color:#0F1F3D;">Pro profile</div><div style="font-size:10px;color:#8A8FA0;margin-top:1px;">What employers see</div></div>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8A8FA0" stroke-width="2" style="margin-left:auto;"><polyline points="9 18 15 12 9 6"/></svg>
       </div>
-      <div onclick="goTo('s-map')" style="background:#fff;border:1.5px solid #E0DBD0;border-radius:13px;padding:12px;cursor:pointer;display:flex;align-items:center;gap:8px;">
-        <div style="font-size:20px;">🗺</div>
-        <div><div style="font-size:12px;font-weight:600;color:#0F1F3D;">Gig map</div><div style="font-size:10px;color:#8A8FA0;margin-top:1px;">Nearby requests</div></div>
+      <div onclick="goTo('s-public-gig-profile')" style="background:#fff;border:1.5px solid #E0DBD0;border-radius:13px;padding:12px;cursor:pointer;display:flex;align-items:center;gap:8px;">
+        <div style="font-size:20px;">⚡</div>
+        <div><div style="font-size:12px;font-weight:600;color:#0F1F3D;">Gig profile</div><div style="font-size:10px;color:#8A8FA0;margin-top:1px;">What local clients see</div></div>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8A8FA0" stroke-width="2" style="margin-left:auto;"><polyline points="9 18 15 12 9 6"/></svg>
       </div>
     </div>
-    <div class="sec">Reviews</div>
+    <div class="sec">Professional reviews</div>
     <div class="rv-card">
       <div class="rv-top">
         <div class="rv-av"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt="James"/></div>
-        <div style="flex:1;"><div class="rv-name">James Whitfield</div><div class="rv-rel">Former Manager · IBM</div><div class="rv-stars">⭐⭐⭐⭐⭐</div></div>
+        <div style="flex:1;"><div class="rv-name">James Whitfield</div><div class="rv-rel">Former Manager · IBM Consulting</div><div class="rv-stars">⭐⭐⭐⭐⭐</div></div>
         <div class="rv-vfy"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Verified</div>
       </div>
-      <div class="rv-txt">"Afsaneh is one of the most skilled solution architects I've worked with. Cloud migration delivered 3 weeks early."</div>
-      <div class="rv-tags"><span class="rv-tag">Cloud architecture</span><span class="rv-tag">Leadership</span></div>
+      <div class="rv-txt">"Afsaneh is one of the most skilled solution architects I've worked with. She delivered our cloud migration 3 weeks early and under budget."</div>
+      <div class="rv-tags"><span class="rv-tag">Cloud architecture</span><span class="rv-tag">Leadership</span><span class="rv-tag">System design</span></div>
     </div>
     <div class="rv-card">
       <div class="rv-top">
         <div class="rv-av" style="background:linear-gradient(135deg,#4A8FE7,#2952B3);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:13px;">SR</div>
-        <div style="flex:1;"><div class="rv-name">Sofia Rodriguez</div><div class="rv-rel">Colleague · Stripe</div><div class="rv-stars">⭐⭐⭐⭐⭐</div></div>
+        <div style="flex:1;"><div class="rv-name">Sofia Rodriguez</div><div class="rv-rel">Colleague · Stripe (2021–2023)</div><div class="rv-stars">⭐⭐⭐⭐⭐</div></div>
         <div class="rv-vfy"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Verified</div>
       </div>
-      <div class="rv-txt">"Stakeholder management and roadmapping skills are second to none."</div>
+      <div class="rv-txt">"Working alongside Afsaneh was a masterclass in stakeholder management. Calm under pressure, always strategic."</div>
       <div class="rv-tags"><span class="rv-tag">Stakeholder mgmt</span><span class="rv-tag">Roadmapping</span></div>
     </div>
-    <button class="btn btn-navy" style="margin-top:8px;" onclick="showToast('Review request sent!')">
-      <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      Request a review
+    <div class="rv-card">
+      <div class="rv-top">
+        <div class="rv-av"><img src="https://randomuser.me/api/portraits/men/62.jpg" alt="David"/></div>
+        <div style="flex:1;"><div class="rv-name">David Chen</div><div class="rv-rel">Client · Freelance 2024</div><div class="rv-stars">⭐⭐⭐⭐⭐</div></div>
+        <div class="rv-vfy"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Verified</div>
+      </div>
+      <div class="rv-txt">"Hired Afsaneh to architect our AWS infrastructure. Bulletproof system design, clear documentation. Would hire again immediately."</div>
+      <div class="rv-tags"><span class="rv-tag">AWS</span><span class="rv-tag">Fintech</span><span class="rv-tag">Documentation</span></div>
+    </div>
+
+    <div class="sec" style="margin-top:16px;">Gig &amp; life skills reviews</div>
+    <div class="rv-card">
+      <div class="rv-top">
+        <div class="rv-av"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah"/></div>
+        <div style="flex:1;"><div class="rv-name">Sarah K.</div><div class="rv-rel">Dog walking · Coconut Grove</div><div class="rv-stars">⭐⭐⭐⭐⭐</div></div>
+        <div class="rv-vfy"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Verified</div>
+      </div>
+      <div class="rv-txt">"Afsaneh walked Max for 3 weekends. He absolutely loved her — came home happy every time. Sent photos and updates throughout. So reliable!"</div>
+      <div class="rv-tags"><span class="rv-tag">🐕 Dog walking</span><span class="rv-tag">Reliable</span></div>
+    </div>
+    <div class="rv-card">
+      <div class="rv-top">
+        <div class="rv-av"><img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Tom"/></div>
+        <div style="flex:1;"><div class="rv-name">Tom H.</div><div class="rv-rel">Home cooking · Brickell</div><div class="rv-stars">⭐⭐⭐⭐⭐</div></div>
+        <div class="rv-vfy"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Verified</div>
+      </div>
+      <div class="rv-txt">"Afsaneh cooked a Persian dinner for 10 guests. The food was outstanding — multiple guests asked for recipes. Professional, punctual, kitchen was spotless."</div>
+      <div class="rv-tags"><span class="rv-tag">🍳 Home cooking</span><span class="rv-tag">Persian cuisine</span></div>
+    </div>
+
+    <div style="display:flex;gap:8px;margin-top:10px;">
+      <button class="btn btn-navy" style="flex:1;" onclick="showToast('Review request sent! 📧')">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Request review
+      </button>
+      <button style="flex:1;background:#C9A84C;color:#0F1F3D;border:none;border-radius:14px;padding:15px;font-family:'Epilogue',sans-serif;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;" onclick="goTo('s-public-profile')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F1F3D" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        Public view
+      </button>
+    </div>
+    <button style="width:100%;background:#C9A84C;color:#0F1F3D;border:none;border-radius:14px;padding:15px;font-family:'Epilogue',sans-serif;font-size:15px;font-weight:600;cursor:pointer;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:8px;" onclick="showToast('Request sent! Afsaneh will be in touch.')">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F1F3D" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      Request to work together
     </button>
   </div>
   <div class="tabs">
@@ -738,97 +942,128 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
   </div>
 </div>
 
-<!-- PUBLIC PROFILE SCREEN -->
+<!-- PUBLIC PROFILE SCREEN - PROFESSIONAL -->
 <div class="screen" id="s-public-profile">
   <div class="nav">
     <button class="nav-back" onclick="goBack()"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
-    <div class="nav-title">Your public profile</div>
-    <div style="display:flex;gap:8px;">
-      <button onclick="showToast('Link copied!')" style="background:rgba(255,255,255,0.1);border:none;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:600;color:#fff;cursor:pointer;display:flex;align-items:center;gap:5px;">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-        Share
-      </button>
-    </div>
+    <div class="nav-title">Professional profile</div>
+    <button onclick="showToast('Link copied! facet.app/afsaneh-pro')" style="background:rgba(255,255,255,0.1);border:none;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:600;color:#fff;cursor:pointer;">Share</button>
   </div>
   <div style="background:rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.1);padding:8px 18px;flex-shrink:0;display:flex;align-items:center;gap:8px;">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.1 13.2 7.8 13.9a.3.3 0 0 0 .4 0C12.9 23.2 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
-    <div style="font-size:11px;color:rgba(255,255,255,0.45);font-family:'Epilogue',sans-serif;">facet.app/afsaneh-motameni</div>
-    <div style="margin-left:auto;font-size:10px;font-weight:600;background:rgba(42,125,82,0.2);color:#4CAF82;border-radius:6px;padding:2px 8px;">Live</div>
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.1 13.2 7.8 13.9a.3.3 0 0 0 .4 0C12.9 23.2 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+    <div style="font-size:11px;color:rgba(255,255,255,0.4);flex:1;font-family:monospace;">facet.app/afsaneh-pro</div>
+    <div style="font-size:10px;font-weight:600;background:rgba(42,125,82,0.2);color:#4CAF82;border-radius:6px;padding:2px 8px;">Live</div>
   </div>
-
-  <!-- What clients see — preview banner -->
-  <div style="background:rgba(201,168,76,0.1);border-bottom:1px solid rgba(201,168,76,0.2);padding:8px 18px;flex-shrink:0;display:flex;align-items:center;gap:8px;">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-    <div style="font-size:11px;font-weight:600;color:#C9A84C;">Preview — this is exactly what clients see</div>
+  <div style="background:rgba(41,82,179,0.08);border-bottom:1px solid rgba(41,82,179,0.15);padding:8px 18px;flex-shrink:0;display:flex;align-items:center;gap:6px;">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2952B3" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+    <div style="font-size:11px;font-weight:600;color:#2952B3;">Preview — what hiring managers see</div>
   </div>
-
-  <div class="scroll" style="padding:0 0 90px;background:#F8F6F1;">
-    <!-- Public profile card -->
-    <div style="background:linear-gradient(160deg,#0F1F3D,#1B3A7A);padding:28px 20px 24px;display:flex;flex-direction:column;align-items:center;gap:10px;">
+  <div class="scroll" style="padding:0 0 90px;">
+    <div style="background:linear-gradient(160deg,#0F1F3D,#1B3A7A);padding:24px 18px;display:flex;flex-direction:column;align-items:center;gap:8px;">
       <div style="position:relative;">
-        <img id="pub-photo" src="" alt="Afsaneh" style="width:80px;height:80px;border-radius:50%;border:3px solid rgba(255,255,255,0.25);object-fit:cover;object-position:center top;display:block;"/>
+        <img id="pub-pro-photo" src="" alt="Afsaneh" style="width:72px;height:72px;border-radius:50%;border:3px solid rgba(255,255,255,0.2);object-fit:cover;object-position:center top;display:block;background:linear-gradient(135deg,#2952B3,#1B3A7A);"/>
         <div style="position:absolute;bottom:0;right:0;background:#0F1F3D;border-radius:50%;padding:2px;">
-          <svg width="18" height="18" viewBox="0 0 44 44" fill="none">
-            <defs><radialGradient id="pub-bg" cx="38%" cy="30%" r="62%"><stop offset="0%" stop-color="#72D4F8"/><stop offset="55%" stop-color="#1D9BF0"/><stop offset="100%" stop-color="#0873C4"/></radialGradient></defs>
-            <path d="M22 2.5C24.2 2.5 26.3 3.5 27.8 5.1C29.5 4 31.6 4 33.2 5.1C34.9 6.6 35.4 8.8 34.3 10.5C36 11.6 37.2 13.4 37.2 15.4C37.2 17.6 35.6 19.4 33.4 19.9C34 21.5 33.9 23.3 32.9 24.8C31.8 26.4 30.1 27 28.4 27C27.9 28.7 26.7 29.9 25 30.4C23.4 30.9 21.7 30.4 20.6 29.3C19.5 30.4 17.8 30.9 16.2 30.4C14.5 29.9 13.3 28.7 12.8 27C11.1 27 9.4 26.4 8.3 24.8C7.3 23.3 7.2 21.5 7.8 19.9C5.6 19.4 4 17.6 4 15.4C4 13.4 5.2 11.6 6.9 10.5C5.8 8.8 6.3 6.6 8 5.1C9.6 4 11.7 4 13.4 5.1C14.9 3.5 17 2.5 19.2 2.5Z" fill="url(#pub-bg)"/>
-            <polyline points="13,17.5 19,23.5 31,12.5" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <svg width="18" height="18" viewBox="0 0 44 44" fill="none"><defs><radialGradient id="ppb" cx="38%" cy="30%" r="62%"><stop offset="0%" stop-color="#72D4F8"/><stop offset="55%" stop-color="#1D9BF0"/><stop offset="100%" stop-color="#0873C4"/></radialGradient></defs><path d="M22 2.5C24.2 2.5 26.3 3.5 27.8 5.1C29.5 4 31.6 4 33.2 5.1C34.9 6.6 35.4 8.8 34.3 10.5C36 11.6 37.2 13.4 37.2 15.4C37.2 17.6 35.6 19.4 33.4 19.9C34 21.5 33.9 23.3 32.9 24.8C31.8 26.4 30.1 27 28.4 27C27.9 28.7 26.7 29.9 25 30.4C23.4 30.9 21.7 30.4 20.6 29.3C19.5 30.4 17.8 30.9 16.2 30.4C14.5 29.9 13.3 28.7 12.8 27C11.1 27 9.4 26.4 8.3 24.8C7.3 23.3 7.2 21.5 7.8 19.9C5.6 19.4 4 17.6 4 15.4C4 13.4 5.2 11.6 6.9 10.5C5.8 8.8 6.3 6.6 8 5.1C9.6 4 11.7 4 13.4 5.1C14.9 3.5 17 2.5 19.2 2.5Z" fill="url(#ppb)"/><polyline points="13,17.5 19,23.5 31,12.5" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
       </div>
-      <div style="font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#fff;">Afsaneh Motameni</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.55);">Miami, USA · $180/hr · Available now</div>
+      <div style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#fff;text-align:center;">Afsaneh Motameni</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.5);text-align:center;">Solution Architect · Product Manager · Miami, USA</div>
       <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;">
-        <div style="font-size:10px;font-weight:600;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);border-radius:6px;padding:4px 9px;">Solution Architect</div>
-        <div style="font-size:10px;font-weight:600;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);border-radius:6px;padding:4px 9px;">Product Manager</div>
-        <div style="font-size:10px;font-weight:600;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);border-radius:6px;padding:4px 9px;">Project Planner</div>
+        <span style="font-size:10px;font-weight:600;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);border-radius:5px;padding:3px 8px;">$180/hr</span>
+        <span style="font-size:10px;font-weight:600;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);border-radius:5px;padding:3px 8px;">Available now</span>
+        <span style="font-size:10px;font-weight:600;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);border-radius:5px;padding:3px 8px;">Remote · Hybrid</span>
       </div>
-      <button style="background:#C9A84C;color:#0F1F3D;border:none;border-radius:12px;padding:11px 28px;font-family:'Epilogue',sans-serif;font-size:14px;font-weight:600;cursor:pointer;margin-top:4px;">Request to work together</button>
+      <button style="background:#C9A84C;color:#0F1F3D;border:none;border-radius:11px;padding:10px 28px;font-family:'Epilogue',sans-serif;font-size:13px;font-weight:700;cursor:pointer;" onclick="showToast('Request sent to Afsaneh!')">Request to work together</button>
     </div>
-
     <div style="padding:16px;">
-      <!-- Stats -->
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:18px;">
-        <div style="background:#fff;border:1px solid #E0DBD0;border-radius:13px;padding:11px;text-align:center;">
-          <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#0F1F3D;">4.9</div>
-          <div style="font-size:10px;color:#8A8FA0;margin-top:2px;">Rating</div>
-        </div>
-        <div style="background:#fff;border:1px solid #E0DBD0;border-radius:13px;padding:11px;text-align:center;">
-          <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#0F1F3D;">13</div>
-          <div style="font-size:10px;color:#8A8FA0;margin-top:2px;">Reviews</div>
-        </div>
-        <div style="background:#fff;border:1px solid #E0DBD0;border-radius:13px;padding:11px;text-align:center;">
-          <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#0F1F3D;">10+</div>
-          <div style="font-size:10px;color:#8A8FA0;margin-top:2px;">Projects</div>
-        </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:14px;">
+        <div style="background:#fff;border:1px solid #E0DBD0;border-radius:11px;padding:10px;text-align:center;"><div style="font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#0F1F3D;">4.9</div><div style="font-size:9px;color:#8A8FA0;margin-top:2px;">Rating</div></div>
+        <div style="background:#fff;border:1px solid #E0DBD0;border-radius:11px;padding:10px;text-align:center;"><div style="font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#0F1F3D;">13</div><div style="font-size:9px;color:#8A8FA0;margin-top:2px;">Reviews</div></div>
+        <div style="background:#fff;border:1px solid #E0DBD0;border-radius:11px;padding:10px;text-align:center;"><div style="font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#0F1F3D;">10+</div><div style="font-size:9px;color:#8A8FA0;margin-top:2px;">Projects</div></div>
       </div>
-
-      <!-- Top skills -->
-      <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A8FA0;margin-bottom:10px;">Top skills</div>
-      <div id="pub-skills-list" style="margin-bottom:18px;"></div>
-
-      <!-- Gig services -->
-      <div id="pub-gigs-section" style="display:none;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A8FA0;margin-bottom:10px;">Also available for</div>
-        <div id="pub-gigs-list" style="margin-bottom:18px;"></div>
-      </div>
-
-      <!-- Review -->
-      <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A8FA0;margin-bottom:10px;">Reviews</div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A8FA0;margin-bottom:8px;">Verified skills</div>
+      <div id="pub-pro-skills"></div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A8FA0;margin-bottom:8px;margin-top:12px;">Professional reviews</div>
       <div class="rv-card">
         <div class="rv-top">
           <div class="rv-av"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt="James"/></div>
           <div style="flex:1;"><div class="rv-name">James Whitfield</div><div class="rv-rel">Former Manager · IBM</div><div class="rv-stars">⭐⭐⭐⭐⭐</div></div>
           <div class="rv-vfy"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Verified</div>
         </div>
-        <div class="rv-txt">"Afsaneh is one of the most skilled solution architects I've worked with. Exceptional cloud migration delivery."</div>
+        <div class="rv-txt">"Exceptional cloud architect. Delivered migration 3 weeks early and under budget."</div>
       </div>
     </div>
   </div>
-
-  <!-- Customize toggle -->
   <div class="bottom" style="display:flex;flex-direction:column;gap:8px;">
-    <button class="btn btn-navy" onclick="goTo('s-customize-profile')">Customize what clients see <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
-    <button class="btn" style="background:transparent;border:1px solid #E0DBD0;color:#0F1F3D;" onclick="showToast('Link copied! facet.app/afsaneh-motameni')">Copy public link</button>
+    <button class="btn btn-navy" onclick="goTo('s-customize-profile')">Customize this profile <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+    <button class="btn" style="background:transparent;border:1px solid #E0DBD0;color:#0F1F3D;" onclick="showToast('Link copied!')">Copy public link</button>
+  </div>
+</div>
+
+<!-- PUBLIC PROFILE SCREEN - GIG SERVICES -->
+<div class="screen" id="s-public-gig-profile">
+  <div class="nav" style="background:#1C1A2E;">
+    <button class="nav-back" onclick="goBack()"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <div class="nav-title">Gig profile</div>
+    <button onclick="showToast('Link copied! facet.app/afsaneh-gigs')" style="background:rgba(201,168,76,0.15);border:none;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:600;color:#C9A84C;cursor:pointer;">Share</button>
+  </div>
+  <div style="background:rgba(201,168,76,0.08);border-bottom:1px solid rgba(201,168,76,0.15);padding:8px 18px;flex-shrink:0;display:flex;align-items:center;gap:8px;">
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.1 13.2 7.8 13.9a.3.3 0 0 0 .4 0C12.9 23.2 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+    <div style="font-size:11px;color:rgba(201,168,76,0.5);flex:1;font-family:monospace;">facet.app/afsaneh-gigs</div>
+    <div style="font-size:10px;font-weight:600;background:rgba(42,125,82,0.2);color:#4CAF82;border-radius:6px;padding:2px 8px;">Live · Miami</div>
+  </div>
+  <div style="background:rgba(201,168,76,0.06);border-bottom:1px solid rgba(201,168,76,0.12);padding:8px 18px;flex-shrink:0;display:flex;align-items:center;gap:6px;">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+    <div style="font-size:11px;font-weight:600;color:#C9A84C;">Preview — what local clients see</div>
+  </div>
+  <div class="scroll" style="padding:0 0 90px;">
+    <div style="background:linear-gradient(160deg,#1C1A2E,#2D2A45);padding:24px 18px;display:flex;flex-direction:column;align-items:center;gap:8px;">
+      <div style="width:72px;height:72px;border-radius:50%;border:3px solid rgba(201,168,76,0.3);background:linear-gradient(135deg,#2D2A45,#1C1A2E);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#C9A84C;">AM</div>
+      <div style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#fff;">Afsaneh M.</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.45);">Coconut Grove, Miami · Available now</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="font-family:'Fraunces',serif;font-size:28px;font-weight:700;color:#C9A84C;">4.9</div>
+        <div style="font-size:14px;">⭐⭐⭐⭐⭐</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.4);">28 gig reviews</div>
+      </div>
+      <div style="display:flex;gap:5px;flex-wrap:wrap;justify-content:center;">
+        <span style="font-size:10px;font-weight:600;background:rgba(201,168,76,0.15);color:#C9A84C;border-radius:5px;padding:3px 8px;">🐕 Dog walking</span>
+        <span style="font-size:10px;font-weight:600;background:rgba(201,168,76,0.15);color:#C9A84C;border-radius:5px;padding:3px 8px;">🍳 Cooking</span>
+        <span style="font-size:10px;font-weight:600;background:rgba(201,168,76,0.15);color:#C9A84C;border-radius:5px;padding:3px 8px;">🌿 Lawn mowing</span>
+        <span style="font-size:10px;font-weight:600;background:rgba(201,168,76,0.15);color:#C9A84C;border-radius:5px;padding:3px 8px;">🌐 Languages</span>
+      </div>
+    </div>
+    <div style="padding:16px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A8FA0;margin-bottom:10px;">Services &amp; rates</div>
+      <div id="pub-gig-services"></div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8A8FA0;margin-bottom:10px;margin-top:4px;">Gig reviews</div>
+      <div style="background:#fff;border:1px solid #E0DBD0;border-radius:13px;padding:12px;margin-bottom:8px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" style="width:30px;height:30px;border-radius:50%;object-fit:cover;"/>
+          <div style="flex:1;font-size:12px;font-weight:600;color:#0F1F3D;">Sarah K.</div>
+          <span style="font-size:10px;font-weight:600;background:rgba(201,168,76,0.1);color:#8A6A1A;border-radius:5px;padding:2px 7px;">Dog walking</span>
+        </div>
+        <div style="font-size:11px;margin-bottom:4px;">⭐⭐⭐⭐⭐</div>
+        <div style="font-size:11px;color:#8A8FA0;line-height:1.6;">"Max loved her! So reliable, sent photo updates. Will book again!"</div>
+      </div>
+      <div style="background:#fff;border:1px solid #E0DBD0;border-radius:13px;padding:12px;margin-bottom:14px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+          <img src="https://randomuser.me/api/portraits/men/52.jpg" style="width:30px;height:30px;border-radius:50%;object-fit:cover;"/>
+          <div style="flex:1;font-size:12px;font-weight:600;color:#0F1F3D;">Carlos V.</div>
+          <span style="font-size:10px;font-weight:600;background:rgba(201,168,76,0.1);color:#8A6A1A;border-radius:5px;padding:2px 7px;">Cooking</span>
+        </div>
+        <div style="font-size:11px;margin-bottom:4px;">⭐⭐⭐⭐⭐</div>
+        <div style="font-size:11px;color:#8A8FA0;line-height:1.6;">"Amazing Persian dinner for our party. Everyone wanted the recipe!"</div>
+      </div>
+      <button onclick="showToast('Request sent to Afsaneh!')" style="width:100%;background:#1C1A2E;color:#fff;border:none;border-radius:13px;padding:14px;font-family:'Epilogue',sans-serif;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.32-1.32a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Book Afsaneh directly
+      </button>
+    </div>
+  </div>
+  <div class="bottom" style="display:flex;flex-direction:column;gap:8px;">
+    <button class="btn btn-navy" onclick="goTo('s-customize-gig-profile')">Customize gig profile <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+    <button class="btn" style="background:transparent;border:1px solid rgba(201,168,76,0.3);color:#8A6A1A;" onclick="showToast('Gig link copied!')">Copy gig link</button>
   </div>
 </div>
 
