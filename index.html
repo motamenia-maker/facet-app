@@ -1229,64 +1229,241 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
   <div class="nav">
     <button class="nav-back" onclick="goBack()"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
     <div class="nav-title" id="re-company-title">Resume for Salesforce</div>
+    <button onclick="showToast('Downloading PDF...')" style="background:rgba(255,255,255,0.1);border:none;border-radius:8px;padding:5px 10px;color:#fff;font-size:11px;font-weight:600;cursor:pointer;">PDF</button>
   </div>
-  <div style="background:rgba(201,168,76,0.1);border-bottom:1px solid rgba(201,168,76,0.2);padding:8px 18px;flex-shrink:0;display:flex;align-items:center;gap:7px;">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8A6A1A" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-    <span style="font-size:11px;font-weight:600;color:#8A6A1A;">Tailored for this role — tap any field to edit</span>
+
+  <!-- ATS tip bar -->
+  <div style="background:rgba(42,125,82,0.08);border-bottom:1px solid rgba(42,125,82,0.2);padding:8px 18px;flex-shrink:0;display:flex;align-items:center;gap:7px;">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2A7D52" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span style="font-size:11px;font-weight:600;color:#2A7D52;flex:1;">ATS-optimized · Human-readable · Tap any field to edit</span>
+    <div id="ats-score-badge" style="background:#2A7D52;color:#fff;border-radius:6px;padding:2px 8px;font-size:10px;font-weight:700;">ATS 94%</div>
   </div>
-  <div class="scroll" style="padding:16px 18px 110px;">
 
-    <!-- Resume paper -->
-    <div style="background:#fff;border:1px solid #E0DBD0;border-radius:16px;padding:18px;margin-bottom:14px;">
+  <div class="scroll" style="padding:14px 16px 110px;background:#F0F0F0;">
 
-      <!-- Header -->
-      <div style="border-bottom:2px solid #2952B3;padding-bottom:12px;margin-bottom:14px;">
-        <div contenteditable="true" id="re-name" style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#0F1F3D;outline:none;border-bottom:1px dashed transparent;" onfocus="this.style.borderBottomColor='#2952B3'" onblur="this.style.borderBottomColor='transparent'">Afsaneh Motameni</div>
-        <div contenteditable="true" id="re-role-title" style="font-size:13px;color:#2952B3;font-weight:600;margin-top:3px;outline:none;" onfocus="this.style.background='rgba(41,82,179,0.04)'" onblur="this.style.background=''">Principal Solution Architect</div>
-        <div style="font-size:11px;color:#8A8FA0;margin-top:4px;">Miami, FL · afsaneh@email.com · +1 (305) 000-0000</div>
-      </div>
-
-      <!-- Summary -->
-      <div style="margin-bottom:14px;">
-        <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2952B3;margin-bottom:6px;">Professional Summary</div>
-        <div contenteditable="true" id="re-summary" style="font-size:12px;color:#555;line-height:1.7;outline:none;padding:6px;border-radius:8px;" onfocus="this.style.background='rgba(41,82,179,0.04)'" onblur="this.style.background=''">Experienced Solution Architect with 10+ years delivering enterprise cloud migrations and technical strategy across AWS and Azure. Proven track record aligning technical architecture with C-suite business objectives. Strong stakeholder management and cross-functional leadership skills.</div>
-      </div>
-
-      <!-- Skills matched -->
-      <div style="margin-bottom:14px;">
-        <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2952B3;margin-bottom:8px;">Key Skills — Role Match</div>
-        <div id="re-skills-list"></div>
-      </div>
-
-      <!-- Experience -->
-      <div style="margin-bottom:14px;">
-        <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2952B3;margin-bottom:8px;">Experience</div>
-        <div style="margin-bottom:10px;">
-          <div contenteditable="true" style="font-size:13px;font-weight:600;color:#0F1F3D;outline:none;" onfocus="this.style.background='rgba(41,82,179,0.04)'" onblur="this.style.background=''">Senior Solution Architect</div>
-          <div style="font-size:11px;color:#2952B3;font-weight:500;">IBM Consulting · 2019 – 2024</div>
-          <div contenteditable="true" style="font-size:12px;color:#555;line-height:1.65;margin-top:4px;outline:none;" onfocus="this.style.background='rgba(41,82,179,0.04)'" onblur="this.style.background=''">Led cloud migration for 12 enterprise clients to AWS and Azure. Reduced infrastructure costs by 35% through architecture optimization. Managed $4M program budget and cross-functional teams of 20+.</div>
+    <!-- ATS score card -->
+    <div style="background:#fff;border-radius:14px;padding:13px 15px;margin-bottom:12px;border:1px solid #E0DBD0;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <div style="flex:1;">
+          <div style="font-size:12px;font-weight:700;color:#0F1F3D;">ATS Compatibility Score</div>
+          <div style="font-size:10px;color:#8A8FA0;margin-top:1px;">Based on job description keyword analysis</div>
         </div>
-        <div>
-          <div contenteditable="true" style="font-size:13px;font-weight:600;color:#0F1F3D;outline:none;" onfocus="this.style.background='rgba(41,82,179,0.04)'" onblur="this.style.background=''">Product Manager</div>
-          <div style="font-size:11px;color:#2952B3;font-weight:500;">Microsoft · 2015 – 2019</div>
-          <div contenteditable="true" style="font-size:12px;color:#555;line-height:1.65;margin-top:4px;outline:none;" onfocus="this.style.background='rgba(41,82,179,0.04)'" onblur="this.style.background=''">Owned product roadmap for Azure DevOps tools with 2M+ users. Launched 3 major features generating $12M ARR. Led stakeholder alignment across 5 engineering orgs.</div>
+        <div style="font-family:'Fraunces',serif;font-size:28px;font-weight:700;color:#2A7D52;">94%</div>
+      </div>
+      <div style="height:6px;background:#F0EAE0;border-radius:3px;overflow:hidden;margin-bottom:8px;">
+        <div style="width:94%;height:100%;background:linear-gradient(90deg,#2A7D52,#4CAF82);border-radius:3px;"></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;" id="ats-keywords">
+        <span style="font-size:10px;font-weight:600;background:rgba(42,125,82,0.1);color:#2A7D52;border-radius:5px;padding:2px 7px;">Cloud architecture ✓</span>
+        <span style="font-size:10px;font-weight:600;background:rgba(42,125,82,0.1);color:#2A7D52;border-radius:5px;padding:2px 7px;">AWS ✓</span>
+        <span style="font-size:10px;font-weight:600;background:rgba(42,125,82,0.1);color:#2A7D52;border-radius:5px;padding:2px 7px;">Stakeholder mgmt ✓</span>
+        <span style="font-size:10px;font-weight:600;background:rgba(42,125,82,0.1);color:#2A7D52;border-radius:5px;padding:2px 7px;">System design ✓</span>
+        <span style="font-size:10px;font-weight:600;background:rgba(232,71,42,0.1);color:#E8472A;border-radius:5px;padding:2px 7px;">Security IAM ✗</span>
+        <span style="font-size:10px;font-weight:600;background:rgba(232,71,42,0.1);color:#E8472A;border-radius:5px;padding:2px 7px;">Terraform ✗</span>
+      </div>
+      <div style="font-size:11px;color:#8A8FA0;margin-top:8px;">Add Security IAM and Terraform to reach 100%</div>
+    </div>
+
+    <!-- RESUME PAPER — white card, clean typography -->
+    <div style="background:#fff;border-radius:14px;padding:22px 20px;margin-bottom:12px;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+
+      <!-- ── HEADER ── -->
+      <div style="border-bottom:3px solid #0F1F3D;padding-bottom:14px;margin-bottom:16px;">
+        <div contenteditable="true" id="re-name"
+          style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:#0F1F3D;outline:none;line-height:1.1;"
+          onfocus="this.style.background='rgba(41,82,179,0.04)'" onblur="this.style.background=''">Afsaneh Motameni</div>
+        <div contenteditable="true" id="re-role-title"
+          style="font-size:13px;color:#2952B3;font-weight:600;margin-top:4px;outline:none;"
+          onfocus="this.style.background='rgba(41,82,179,0.04)'" onblur="this.style.background=''">Principal Solution Architect</div>
+        <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+          <div style="display:flex;align-items:center;gap:4px;font-size:11px;color:#555;">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.07 6.07l1.32-1.32a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +1 (305) 000-0000
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:11px;color:#555;">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            afsaneh@email.com
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:11px;color:#555;">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.1 13.2 7.8 13.9a.3.3 0 0 0 .4 0C12.9 23.2 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+            Miami, FL
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:11px;color:#2952B3;">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#2952B3" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            linkedin.com/in/afsaneh-m
+          </div>
         </div>
       </div>
 
-      <!-- Education -->
+      <!-- ── PROFESSIONAL SUMMARY ── -->
+      <!-- ATS NOTE: Summary must contain exact keywords from job description -->
+      <div style="margin-bottom:16px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0F1F3D;margin-bottom:7px;display:flex;align-items:center;gap:6px;">
+          Professional Summary
+          <div style="flex:1;height:1px;background:#E0DBD0;"></div>
+        </div>
+        <div contenteditable="true" id="re-summary"
+          style="font-size:12px;color:#333;line-height:1.75;outline:none;padding:6px;border-radius:6px;"
+          onfocus="this.style.background='rgba(41,82,179,0.03)'" onblur="this.style.background=''">Solution Architect and Product Manager with 10+ years designing and delivering enterprise-scale cloud architecture on AWS and Azure. Expert at translating complex technical requirements into strategic business solutions. Proven track record managing stakeholder relationships from engineering teams to C-suite. Deep expertise in system design, API architecture, and Agile delivery methodologies. Available immediately for remote or hybrid engagements.</div>
+      </div>
+
+      <!-- ── CORE COMPETENCIES ── -->
+      <!-- ATS NOTE: Skills section - use exact terms from job description -->
+      <div style="margin-bottom:16px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0F1F3D;margin-bottom:8px;display:flex;align-items:center;gap:6px;">
+          Core Competencies
+          <div style="flex:1;height:1px;background:#E0DBD0;"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 16px;" id="re-skills-grid">
+          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Cloud Architecture (AWS/Azure)
+          </div>
+          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Stakeholder Management
+          </div>
+          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>System Design &amp; APIs
+          </div>
+          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Product Roadmapping
+          </div>
+          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Agile / Scrum Delivery
+          </div>
+          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Technical Program Management
+          </div>
+          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Risk Management &amp; Compliance
+          </div>
+          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
+            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Executive Communication
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PROFESSIONAL EXPERIENCE ── -->
+      <div style="margin-bottom:16px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0F1F3D;margin-bottom:10px;display:flex;align-items:center;gap:6px;">
+          Professional Experience
+          <div style="flex:1;height:1px;background:#E0DBD0;"></div>
+        </div>
+
+        <!-- Job 1 -->
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:2px;">
+            <div contenteditable="true"
+              style="font-size:13px;font-weight:700;color:#0F1F3D;outline:none;flex:1;"
+              onfocus="this.style.background='rgba(41,82,179,0.03)'" onblur="this.style.background=''">Senior Solution Architect</div>
+            <div style="font-size:11px;color:#555;white-space:nowrap;font-weight:500;">2019 – 2024</div>
+          </div>
+          <div style="font-size:12px;color:#2952B3;font-weight:600;margin-bottom:6px;">IBM Consulting · Miami, FL (Remote)</div>
+          <div contenteditable="true"
+            style="font-size:12px;color:#333;line-height:1.7;outline:none;padding:4px;border-radius:6px;"
+            onfocus="this.style.background='rgba(41,82,179,0.03)'" onblur="this.style.background=''">
+            • Led cloud architecture design for 12 enterprise AWS migrations, reducing infrastructure costs by 34% and improving system uptime to 99.97%<br>
+            • Managed cross-functional stakeholder relationships across 6 product teams, C-suite, and external vendors throughout $8M digital transformation<br>
+            • Designed RESTful API architecture and microservices strategy adopted across 3 business units serving 2M+ users<br>
+            • Delivered all 12 projects on time; 9 of 12 delivered under budget, averaging 18% cost savings
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:2px;">
+            <div contenteditable="true"
+              style="font-size:13px;font-weight:700;color:#0F1F3D;outline:none;flex:1;"
+              onfocus="this.style.background='rgba(41,82,179,0.03)'" onblur="this.style.background=''">Senior Product Manager</div>
+            <div style="font-size:11px;color:#555;white-space:nowrap;font-weight:500;">2015 – 2019</div>
+          </div>
+          <div style="font-size:12px;color:#2952B3;font-weight:600;margin-bottom:6px;">Microsoft · Seattle, WA (Hybrid)</div>
+          <div contenteditable="true"
+            style="font-size:12px;color:#333;line-height:1.7;outline:none;padding:4px;border-radius:6px;"
+            onfocus="this.style.background='rgba(41,82,179,0.03)'" onblur="this.style.background=''">
+            • Owned product roadmap for Azure integration suite used by 40,000+ enterprise customers globally<br>
+            • Drove 3 major product launches using Agile/Scrum methodology, each shipped on schedule with 95%+ stakeholder satisfaction<br>
+            • Increased feature adoption by 62% through data-driven A/B testing and user research with 500+ enterprise customers
+          </div>
+        </div>
+      </div>
+
+      <!-- ── EDUCATION ── -->
+      <div style="margin-bottom:16px;">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0F1F3D;margin-bottom:8px;display:flex;align-items:center;gap:6px;">
+          Education
+          <div style="flex:1;height:1px;background:#E0DBD0;"></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;">
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#0F1F3D;">B.S. Computer Science</div>
+            <div style="font-size:12px;color:#555;margin-top:2px;">University of Miami · Miami, FL</div>
+          </div>
+          <div style="font-size:11px;color:#555;white-space:nowrap;">2011</div>
+        </div>
+      </div>
+
+      <!-- ── CERTIFICATIONS ── -->
       <div>
-        <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2952B3;margin-bottom:8px;">Education</div>
-        <div style="font-size:12px;font-weight:600;color:#0F1F3D;">B.S. Computer Science</div>
-        <div style="font-size:11px;color:#8A8FA0;">University of Miami · 2010</div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0F1F3D;margin-bottom:8px;display:flex;align-items:center;gap:6px;">
+          Certifications
+          <div style="flex:1;height:1px;background:#E0DBD0;"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div style="font-size:12px;color:#333;display:flex;align-items:center;gap:6px;">
+              <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>AWS Certified Solutions Architect – Professional
+            </div>
+            <div style="font-size:11px;color:#555;">2022</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div style="font-size:12px;color:#333;display:flex;align-items:center;gap:6px;">
+              <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Microsoft Azure Solutions Architect Expert (AZ-305)
+            </div>
+            <div style="font-size:11px;color:#555;">2021</div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div style="font-size:12px;color:#333;display:flex;align-items:center;gap:6px;">
+              <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Project Management Professional (PMP)
+            </div>
+            <div style="font-size:11px;color:#555;">2018</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end resume paper -->
+
+    <!-- ATS tips card -->
+    <div style="background:#fff;border-radius:14px;padding:13px 15px;margin-bottom:12px;border:1px solid #E0DBD0;">
+      <div style="font-size:11px;font-weight:700;color:#0F1F3D;margin-bottom:8px;">ATS Tips from Facet AI</div>
+      <div style="display:flex;flex-direction:column;gap:7px;">
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="width:16px;height:16px;border-radius:50%;background:rgba(42,125,82,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2A7D52" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div style="font-size:11px;color:#555;line-height:1.55;">Keywords matched to job description: cloud architecture, AWS, stakeholder management, system design, Agile</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="width:16px;height:16px;border-radius:50%;background:rgba(42,125,82,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2A7D52" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div style="font-size:11px;color:#555;line-height:1.55;">Bullet points use strong action verbs: Led, Managed, Designed, Drove, Delivered</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="width:16px;height:16px;border-radius:50%;background:rgba(42,125,82,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2A7D52" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div style="font-size:11px;color:#555;line-height:1.55;">Quantified achievements: 34% cost reduction, 99.97% uptime, $8M project, 2M+ users</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:flex-start;">
+          <div style="width:16px;height:16px;border-radius:50%;background:rgba(232,71,42,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#E8472A" stroke-width="2.5"><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div style="font-size:11px;color:#555;line-height:1.55;">Add <strong>Security IAM</strong> and <strong>Terraform/IaC</strong> to reach 100% keyword match for this role</div>
+        </div>
       </div>
     </div>
 
-    <!-- AI note about what was tailored -->
-    <div style="background:rgba(41,82,179,0.05);border:1px solid rgba(41,82,179,0.15);border-radius:13px;padding:13px;margin-bottom:14px;">
-      <div style="font-size:11px;font-weight:700;color:#2952B3;margin-bottom:6px;">What Facet AI tailored for this role</div>
-      <div id="re-ai-notes" style="font-size:11px;color:#8A8FA0;line-height:1.65;"></div>
-    </div>
-  </div>
+  </div><!-- end scroll -->
 
   <div class="bottom" style="display:flex;flex-direction:column;gap:8px;">
     <button class="btn btn-navy" id="re-send-btn" onclick="sendResume()">
@@ -1297,6 +1474,59 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
   </div>
 </div>
 
+<!-- CUSTOMIZE GIG PROFILE SCREEN -->
+<div class="screen" id="s-customize-gig-profile">
+  <div class="nav">
+    <button class="nav-back" onclick="goBack()"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <div class="nav-title">Customize gig profile</div>
+  </div>
+  <div class="scroll">
+    <div class="lbl">What local clients see</div>
+    <div class="ttl">Your gig profile</div>
+    <div class="sub">Control exactly what appears on facet.app/afsaneh-gigs — your public page for local clients.</div>
+
+    <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#8A8FA0;margin-bottom:8px;">Visibility</div>
+    <div style="background:#fff;border:1px solid #E0DBD0;border-radius:16px;overflow:hidden;margin-bottom:16px;" id="gig-custom-toggles"></div>
+
+    <div class="lbl">Your display name on gig profile</div>
+    <div class="field"><input type="text" value="Afsaneh M." placeholder="Display name for gig profile"/></div>
+    <div style="font-size:11px;color:#8A8FA0;margin-top:-8px;margin-bottom:14px;">Tip: many gig providers use first name + last initial for privacy.</div>
+
+    <div class="lbl">Service radius</div>
+    <div style="background:#fff;border:1px solid #E0DBD0;border-radius:13px;padding:14px;margin-bottom:8px;">
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+        <div style="font-size:13px;font-weight:600;color:#0F1F3D;">Show my gigs within</div>
+        <div style="font-size:16px;font-weight:700;color:#2A7D52;" id="gig-radius-val">5 miles</div>
+      </div>
+      <input type="range" min="1" max="25" value="5" style="-webkit-appearance:none;width:100%;height:5px;border-radius:3px;background:linear-gradient(to right,#2A7D52 20%,#E0DBD0 20%);outline:none;cursor:pointer;" oninput="var v=parseInt(this.value);document.getElementById('gig-radius-val').textContent=v+(v===1?' mile':' miles');var p=((v-1)/24)*100;this.style.background='linear-gradient(to right,#2A7D52 '+p+'%,#E0DBD0 '+p+'%)'"/>
+      <div style="display:flex;justify-content:space-between;margin-top:4px;font-size:10px;color:#8A8FA0;"><span>1 mile</span><span>25 miles</span></div>
+    </div>
+
+    <div style="background:rgba(42,125,82,0.06);border:1px solid rgba(42,125,82,0.2);border-radius:12px;padding:12px;display:flex;gap:9px;margin-bottom:16px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2A7D52" stroke-width="1.5" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.1 13.2 7.8 13.9a.3.3 0 0 0 .4 0C12.9 23.2 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+      <div style="font-size:11px;color:#2A7D52;line-height:1.6;">Your gig pins appear on the Facet map for clients within your radius. They can tap to book you directly — no middleman, no commission.</div>
+    </div>
+
+    <div class="lbl">Booking preference</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;">
+      <div class="pchip on" onclick="togglePchip(this)">Direct message first</div>
+      <div class="pchip" onclick="togglePchip(this)">Instant book</div>
+      <div class="pchip" onclick="togglePchip(this)">Request only</div>
+    </div>
+
+    <div class="lbl">Payment methods</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;">
+      <div class="pchip on" onclick="togglePchip(this)">Cash</div>
+      <div class="pchip on" onclick="togglePchip(this)">Venmo</div>
+      <div class="pchip on" onclick="togglePchip(this)">Zelle</div>
+      <div class="pchip" onclick="togglePchip(this)">PayPal</div>
+      <div class="pchip" onclick="togglePchip(this)">Credit card</div>
+    </div>
+  </div>
+  <div class="bottom">
+    <button class="btn btn-navy" onclick="showToast('Gig profile saved!'); goBack();">Save changes</button>
+  </div>
+</div>
 
 <div class="toast" id="toast"></div>
 <script>
@@ -2208,7 +2438,49 @@ goTo = function(id) {
   if (id === 's-map') {
     setTimeout(function() { drawMap(); }, 100);
   }
+  if (id === 's-customize-gig-profile') renderGigCustomToggles();
+  if (id === 's-resume-review') renderResumeList();
 };
+
+var gigVisibilitySettings = {
+  'Profile photo': true,
+  'Star rating': true,
+  'Gig reviews': true,
+  'Services & rates': true,
+  'Languages': true,
+  'Distance from client': true,
+  'Response time': true,
+  'Book directly button': true,
+};
+
+function renderGigCustomToggles() {
+  var container = document.getElementById('gig-custom-toggles');
+  if (!container) return;
+  container.innerHTML = '';
+  var keys = Object.keys(gigVisibilitySettings);
+  keys.forEach(function(key, i) {
+    var row = document.createElement('div');
+    var isLast = i === keys.length - 1;
+    row.style.cssText = 'display:flex;align-items:center;gap:12px;padding:13px 16px;' + (isLast ? '' : 'border-bottom:1px solid #F0EAE0;');
+    var label = document.createElement('div');
+    label.style.cssText = 'font-size:13px;font-weight:500;color:#0F1F3D;flex:1;';
+    label.textContent = key;
+    var toggle = document.createElement('div');
+    var on = gigVisibilitySettings[key];
+    toggle.style.cssText = 'width:44px;height:26px;border-radius:13px;position:relative;cursor:pointer;transition:background 0.2s;background:' + (on ? '#2A7D52' : '#E0DBD0') + ';';
+    var knob = document.createElement('div');
+    knob.style.cssText = 'position:absolute;width:20px;height:20px;border-radius:50%;background:#fff;top:3px;transition:left 0.2s;box-shadow:0 1px 3px rgba(0,0,0,0.2);left:' + (on ? '21px' : '3px') + ';';
+    toggle.appendChild(knob);
+    toggle.addEventListener('click', function() {
+      gigVisibilitySettings[key] = !gigVisibilitySettings[key];
+      toggle.style.background = gigVisibilitySettings[key] ? '#2A7D52' : '#E0DBD0';
+      knob.style.left = gigVisibilitySettings[key] ? '21px' : '3px';
+    });
+    row.appendChild(label);
+    row.appendChild(toggle);
+    container.appendChild(row);
+  });
+}
 
 window.addEventListener('resize', function() {
   if (current === 's-map') drawMap();
