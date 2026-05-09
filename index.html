@@ -1253,15 +1253,14 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
       <div style="height:6px;background:#F0EAE0;border-radius:3px;overflow:hidden;margin-bottom:8px;">
         <div style="width:94%;height:100%;background:linear-gradient(90deg,#2A7D52,#4CAF82);border-radius:3px;"></div>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:5px;" id="ats-keywords">
-        <span style="font-size:10px;font-weight:600;background:rgba(42,125,82,0.1);color:#2A7D52;border-radius:5px;padding:2px 7px;">Cloud architecture ✓</span>
-        <span style="font-size:10px;font-weight:600;background:rgba(42,125,82,0.1);color:#2A7D52;border-radius:5px;padding:2px 7px;">AWS ✓</span>
-        <span style="font-size:10px;font-weight:600;background:rgba(42,125,82,0.1);color:#2A7D52;border-radius:5px;padding:2px 7px;">Stakeholder mgmt ✓</span>
-        <span style="font-size:10px;font-weight:600;background:rgba(42,125,82,0.1);color:#2A7D52;border-radius:5px;padding:2px 7px;">System design ✓</span>
-        <span style="font-size:10px;font-weight:600;background:rgba(232,71,42,0.1);color:#E8472A;border-radius:5px;padding:2px 7px;">Security IAM ✗</span>
-        <span style="font-size:10px;font-weight:600;background:rgba(232,71,42,0.1);color:#E8472A;border-radius:5px;padding:2px 7px;">Terraform ✗</span>
+      <div style="margin-bottom:6px;">
+        <div style="font-size:10px;font-weight:700;color:#2A7D52;margin-bottom:4px;">Matched keywords</div>
+        <div style="font-size:11px;color:#333;line-height:1.7;">Cloud Architecture · AWS · Stakeholder Management · System Design · Agile · Product Roadmapping</div>
       </div>
-      <div style="font-size:11px;color:#8A8FA0;margin-top:8px;">Add Security IAM and Terraform to reach 100%</div>
+      <div>
+        <div style="font-size:10px;font-weight:700;color:#E8472A;margin-bottom:4px;">Missing keywords — add to reach 100%</div>
+        <div style="font-size:11px;color:#333;line-height:1.7;">Security IAM · Terraform · Infrastructure as Code</div>
+      </div>
     </div>
 
     <!-- RESUME PAPER — white card, clean typography -->
@@ -1314,32 +1313,14 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
           Core Competencies
           <div style="flex:1;height:1px;background:#E0DBD0;"></div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 16px;" id="re-skills-grid">
-          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
-            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Cloud Architecture (AWS/Azure)
-          </div>
-          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
-            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Stakeholder Management
-          </div>
-          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
-            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>System Design &amp; APIs
-          </div>
-          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
-            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Product Roadmapping
-          </div>
-          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
-            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Agile / Scrum Delivery
-          </div>
-          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
-            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Technical Program Management
-          </div>
-          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
-            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Risk Management &amp; Compliance
-          </div>
-          <div style="font-size:12px;color:#333;padding:3px 0;display:flex;align-items:center;gap:6px;">
-            <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Executive Communication
-          </div>
+        <!-- ATS NOTE: Plain text list — no boxes, no icons, no columns.
+             ATS parsers read this as clean comma-separated keywords. -->
+        <div contenteditable="true" id="re-skills-grid"
+          style="font-size:12px;color:#333;line-height:1.9;outline:none;padding:4px;border-radius:6px;"
+          onfocus="this.style.background='rgba(41,82,179,0.03)'" onblur="this.style.background=''">
+          Cloud Architecture (AWS/Azure) &nbsp;·&nbsp; Stakeholder Management &nbsp;·&nbsp; System Design &amp; APIs &nbsp;·&nbsp; Product Roadmapping &nbsp;·&nbsp; Agile / Scrum Delivery &nbsp;·&nbsp; Technical Program Management &nbsp;·&nbsp; Risk Management &amp; Compliance &nbsp;·&nbsp; Executive Communication &nbsp;·&nbsp; Microservices Architecture &nbsp;·&nbsp; API Design &amp; Integration
         </div>
+        <div style="font-size:10px;color:#8A8FA0;margin-top:5px;font-style:italic;">ATS reads this as plain keywords — no boxes, no icons</div>
       </div>
 
       <!-- ── PROFESSIONAL EXPERIENCE ── -->
@@ -1361,10 +1342,10 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
           <div contenteditable="true"
             style="font-size:12px;color:#333;line-height:1.7;outline:none;padding:4px;border-radius:6px;"
             onfocus="this.style.background='rgba(41,82,179,0.03)'" onblur="this.style.background=''">
-            • Led cloud architecture design for 12 enterprise AWS migrations, reducing infrastructure costs by 34% and improving system uptime to 99.97%<br>
-            • Managed cross-functional stakeholder relationships across 6 product teams, C-suite, and external vendors throughout $8M digital transformation<br>
-            • Designed RESTful API architecture and microservices strategy adopted across 3 business units serving 2M+ users<br>
-            • Delivered all 12 projects on time; 9 of 12 delivered under budget, averaging 18% cost savings
+            - Led cloud architecture design for 12 enterprise AWS migrations, reducing infrastructure costs by 34% and improving system uptime to 99.97%<br>
+            - Managed cross-functional stakeholder relationships across 6 product teams, C-suite, and external vendors throughout $8M digital transformation<br>
+            - Designed RESTful API architecture and microservices strategy adopted across 3 business units serving 2M+ users<br>
+            - Delivered all 12 projects on time; 9 of 12 delivered under budget, averaging 18% cost savings
           </div>
         </div>
 
@@ -1380,9 +1361,9 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
           <div contenteditable="true"
             style="font-size:12px;color:#333;line-height:1.7;outline:none;padding:4px;border-radius:6px;"
             onfocus="this.style.background='rgba(41,82,179,0.03)'" onblur="this.style.background=''">
-            • Owned product roadmap for Azure integration suite used by 40,000+ enterprise customers globally<br>
-            • Drove 3 major product launches using Agile/Scrum methodology, each shipped on schedule with 95%+ stakeholder satisfaction<br>
-            • Increased feature adoption by 62% through data-driven A/B testing and user research with 500+ enterprise customers
+            - Owned product roadmap for Azure integration suite used by 40,000+ enterprise customers globally<br>
+            - Drove 3 major product launches using Agile/Scrum methodology, each shipped on schedule with 95%+ stakeholder satisfaction<br>
+            - Increased feature adoption by 62% through data-driven A/B testing and user research with 500+ enterprise customers
           </div>
         </div>
       </div>
@@ -1411,19 +1392,19 @@ input[type=range].sk-slider::-webkit-slider-thumb{-webkit-appearance:none;width:
         <div style="display:flex;flex-direction:column;gap:5px;">
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div style="font-size:12px;color:#333;display:flex;align-items:center;gap:6px;">
-              <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>AWS Certified Solutions Architect – Professional
+              AWS Certified Solutions Architect – Professional
             </div>
             <div style="font-size:11px;color:#555;">2022</div>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div style="font-size:12px;color:#333;display:flex;align-items:center;gap:6px;">
-              <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Microsoft Azure Solutions Architect Expert (AZ-305)
+              Microsoft Azure Solutions Architect Expert (AZ-305)
             </div>
             <div style="font-size:11px;color:#555;">2021</div>
           </div>
           <div style="display:flex;align-items:center;justify-content:space-between;">
             <div style="font-size:12px;color:#333;display:flex;align-items:center;gap:6px;">
-              <div style="width:5px;height:5px;border-radius:50%;background:#0F1F3D;flex-shrink:0;"></div>Project Management Professional (PMP)
+              Project Management Professional (PMP)
             </div>
             <div style="font-size:11px;color:#555;">2018</div>
           </div>
